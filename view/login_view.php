@@ -1,5 +1,6 @@
 <?php
-   ?>
+   require_once "../model/dataAccess.php";
+?>
 <!doctype html>
 <html>
    <head>
@@ -19,6 +20,7 @@
             <br><br>
             <input type="submit" value="Submit">
          </form>
+         <a href="signup.php">SignUp</a>
       </div>
    </body>
 </html>
