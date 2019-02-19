@@ -15,7 +15,7 @@ class vehicle
 
 	function __get($vehicle_model)
 	{
-		return $this->$vehicle_model
+		return $this->$vehicle_model;
 	}
 
 	function __set($vehicle_model,$value)
@@ -25,7 +25,7 @@ class vehicle
 
 	function __get($number_of_passengers)
 	{
-		return $this->$number_of_passengers
+		return $this->$number_of_passengers;
 	}
 
 	function __set($number_of_passengers,$value)
@@ -35,7 +35,7 @@ class vehicle
 
 	function __get($date_available)
 	{
-		return $this->$date_available
+		return $this->$date_available;
 	}
 
 	function __set($date_available,$value)
@@ -45,7 +45,7 @@ class vehicle
 
 	function __get($price)
 	{
-		return $this->$price
+		return $this->$price;
 	}
 
 	function __set($price,$value)
@@ -55,7 +55,7 @@ class vehicle
 
 	function __get($driving_license_required)
 	{
-		return $this->$driving_license_required
+		return $this->$driving_license_required;
 	}
 
 	function __set($driving_license_required,$value)
