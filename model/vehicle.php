@@ -2,7 +2,7 @@
 class vehicle
 {
 	private $id;
-	private $vehicleModel;
+	private $vehicle_model;
 	private $number_of_passengers;
 	private $date_available;
 	private $price;
@@ -13,14 +13,14 @@ class vehicle
 		return $this->$id;
 	}
 
-	function __get($vehicleModel)
+	function __get($vehicle_model)
 	{
-		return $this->$vehicleModel
+		return $this->$vehicle_model
 	}
 
-	function __set($vehicleModel,$value)
+	function __set($vehicle_model,$value)
 	{
-		$this->$vehicleModel = $value;
+		$this->$vehicle_model = $value;
 	}
 
 	function __get($number_of_passengers)
