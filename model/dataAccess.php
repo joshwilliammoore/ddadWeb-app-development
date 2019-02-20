@@ -2,6 +2,10 @@
 $pdo = new PDO("mysql:host=kunet;dbname=db_k1745856", "k1745856", "Badpassword", 
 [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
+session_start();
+
+
+
 function getAllVehicles()
 	{
 	global $pdo;
@@ -28,5 +32,9 @@ function getVehiclesByPassengers($vehicle)
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
 	return $results;
    }
+function users(){
+
+}
+
 
 ?>
