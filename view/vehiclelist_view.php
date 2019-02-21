@@ -52,6 +52,6 @@ Search for vehicle:
       <input type="submit" value="Log in"/>
       </div>
 </form>
-
+<a href="http://uniqurate.kingston.ac.uk/jira/secure/RapidBoard.jspa?rapidView=68&projectKey=A4BUS&view=planning.nodetail">Our Jira link</a>
    </body>
 </html>
