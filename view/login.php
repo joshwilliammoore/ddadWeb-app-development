@@ -17,12 +17,7 @@
         }else{
             $query = "SELECT * FROM users WHERE user_uid = :user_uid AND user_pwd = :user_pwd";
             $statement = $connect->prepare($query);
-            $statement->execute(  
-                array(  
-                     'user_uid'     =>     $_POST["user_uid"],  
-                     'user_pwd'     =>     $_POST["user_pwd"]  
-                )  
-           );
+            $statement->execute(array('user_uid'=>$_POST["user_uid"], 'user_pwd'=>$_POST["user_pwd"]));
             $count = $statement->rowCount();
             if($count > 0){
                 $_SESSION["user_uid"] = $_POST["user_uid"];
@@ -65,9 +60,9 @@
       <div class = "title">
          <form method="post">
             <input type="text" name="user_uid" placeholder="Username/e-mail" > 
-            <br>
-            <input type="password" name="user_pwd" placeholder="password">
-            <br>
+            <br /><br style="line-height:1vh"/>
+            <input type="password" name="user_pwd" placeholder="Password">
+            <br /><br style="line-height:1vh"/>
             <button type="submit" name="login" value="Login">Login</button>
          </form>
       </div>
