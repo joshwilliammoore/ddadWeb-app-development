@@ -13,14 +13,14 @@ class vehicle
 		return $this->$id;
 	}
 
-	/*function __get($vehicle_model)
+	function __get($vehicle)
 	{
-		return $this->$vehicle_model;
+		return $this->$vehicle;
 	}
 
-	function __set($vehicle_model,$value)
+	function __set($vehicle,$value)
 	{
-		$this->$vehicle_model = $value;
+		$this->$vehicle = $value;
 	}
 
 	function __get($number_of_passengers)
@@ -61,6 +61,6 @@ class vehicle
 	function __set($driving_license_required,$value)
 	{
 		$this->$driving_license_required = $value;
-	}*/
+	}
 }
 ?>
