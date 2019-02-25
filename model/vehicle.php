@@ -7,11 +7,6 @@ class vehicle
 	private $date_available;
 	private $price;
 	private $driving_license_required;
-	
-	function __get($id)
-	{
-		return $this->$id;
-	}
 
 	function __get($vehicle)
 	{
