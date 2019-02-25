@@ -61,6 +61,6 @@ class vehicle
 	function __set($driving_license_required,$value)
 	{
 		$this->$driving_license_required = $value;
-	}
-}*/
+	}*/
+}
 ?>
