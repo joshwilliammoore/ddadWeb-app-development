@@ -13,7 +13,7 @@ class vehicle
 		return $this->$id;
 	}
 
-	function __get($vehicle_model)
+	/*function __get($vehicle_model)
 	{
 		return $this->$vehicle_model;
 	}
@@ -62,5 +62,5 @@ class vehicle
 	{
 		$this->$driving_license_required = $value;
 	}
-}
+}*/
 ?>
