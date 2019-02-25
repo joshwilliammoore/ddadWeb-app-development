@@ -29,6 +29,7 @@ Search for vehicle:
          <thead>
             <tr>
                <th>Vehicle ID</th>
+               <th>Vehicle</th>
                <th>Number of passengers</th>
                <th>Date available</th>
                <th>Price</th>
@@ -39,6 +40,7 @@ Search for vehicle:
          <?php foreach ($results as $vehicle): ?>
             <tr>
                <td><?=$vehicle->id?></td>
+               <td><?=$vehicle->vehicleModel?></td>
                <td><?=$vehicle->number_of_passengers?></td>
                <td><?=$vehicle->date_available?></td>
                <td>£<?=$vehicle->price?></td>
