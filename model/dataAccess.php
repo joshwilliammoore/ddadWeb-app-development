@@ -32,6 +32,13 @@ function getVehiclesByPassengers($vehicle)
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
 	return $results;
    }
+
+function addNewVehicle($number_of_passengers, $model, $date_available, $price, $license)
+{
+	global $pdo;
+	$statement = $pdo->prepare("INSERT INTO vehicles (number_of_passengers, vehicleModel, date_available, price, driving_license_required) VALUES ($number_of_passengers, '$model', $date_available, $price, '$license')");
+	$statement ->execute([$number_of_passengers, $model, $date_available, $price, $license]);
+}
 function users(){
 
 }
