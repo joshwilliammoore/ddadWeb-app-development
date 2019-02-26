@@ -48,6 +48,7 @@
             <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
             <li><a href="login.php">LOGIN</a></li>
             <li><a href="signup.php">SIGNUP</a></li>
+            <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
         </ul>
     </header>
     <div class = "title">
