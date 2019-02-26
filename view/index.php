@@ -15,7 +15,6 @@
    <div class = "title">
          <h1>Berwyn Bus Hire</h1>
    </div>
-   
    <body>
       <div class ="slideShow">
          <img class="frontEndSlideshow" src="images/bus1.jpg">
