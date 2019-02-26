@@ -4,7 +4,7 @@
    $host= "kunet";
    $username= "k1745856";
    $password= "Badpassword";
-   $database= "db_k1745856";
+   $database= "db_k1745856";  
    $message= "";
 
    try{
