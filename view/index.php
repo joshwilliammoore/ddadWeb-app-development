@@ -132,14 +132,14 @@
             <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
         </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
-           <!-- <div data-p="170.00">
+           <div data-p="170.00">
                 <img data-u="image" src="img/001.jpg" />
                 
-            </div> -->
-            <!-- <div data-p="170.00">
+            </div>
+            <div data-p="170.00">
                 <img data-u="image" src="img/002.jpg" />
                
-            </div> -->
+            </div>
             <div data-p="170.00">
                 <img data-u="image" src="images/bus1.jpg" />
                 
