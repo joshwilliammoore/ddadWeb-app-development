@@ -36,5 +36,8 @@ function users(){
 
 }
 
+function addNewUser(){
+	
+}
 
 ?>
