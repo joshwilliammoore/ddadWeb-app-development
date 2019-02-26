@@ -31,7 +31,6 @@
          }
       ?>
    </div>
-   
    <body>
    <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
   <script type="text/javascript">
