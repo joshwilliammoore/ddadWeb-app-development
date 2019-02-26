@@ -15,6 +15,7 @@ require_once "../model/vehicle.php";
         <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
         <li><a href="login.php">LOGIN</a></li>
         <li><a href="signup.php">SIGNUP</a></li>
+        <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
    </ul>
    <div class = "title">
          <h1>Vehicle List</h1>
@@ -54,6 +55,5 @@ Search for vehicle:
       <input type="submit" value="Log in"/>
       </div>
 </form>
-<a href="http://uniqurate.kingston.ac.uk/jira/secure/RapidBoard.jspa?rapidView=68&projectKey=A4BUS&view=planning.nodetail">Our Jira link</a>
-   </body>
+</body>
 </html>
