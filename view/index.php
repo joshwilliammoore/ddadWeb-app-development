@@ -53,7 +53,40 @@ index=1;
 b[index-1].style.display="block";
 setTimeout(slide,5000);
 }
-</script>
+  </script>
+  <span id="team">
+  <section class="team">
+  <center>
+    <h1>Team</h1>
+  <div class="team-wrapper">
+    <div class="col-team">
+       <div class="col">
+        <img src="images/logo.jpg" alt="pic" width="200" height="95">
+        <hr>
+       <h3>Abu</h3>
+       <p>intelligent</p>
+  </div>
+    </div>
+    <div class="col-team">
+       <div class="col">
+         <img src="images/logo.jpg" alt="" width="200" height="95">
+         <hr>
+       <h3>Josh</h3>
+       <p>Intelligent</p>
+  </div>
+    </div>
+    <div class="col-team">
+       <div class="col">
+        <img src="images.logo.jpg" alt="" width="200" height="95">
+        <hr>
+       <h3>Qasim Ali</h3>
+       <p>intelligent</p>
+  </div>
+    </div>
+       </div>
+       </center>
+       </section>
+       </span>
 
       
    </body>
