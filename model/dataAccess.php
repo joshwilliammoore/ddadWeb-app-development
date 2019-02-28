@@ -35,7 +35,7 @@ function getVehiclesByPassengers($vehicle)
 function users(){
 
 }
-
+/*
 function userLogin($username, $password){
 	global $pdo;
 	$statement = $pdo->prepare("SELECT username FROM customer_login LIKE '%{$username}%'")
@@ -44,7 +44,7 @@ function userLogin($username, $password){
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "customer_login");
 	return results;
 }
-
+*/
 function addCustomer($fist_name, $second_name, $address, $email_address, $contact_number)
 {
 	global $pdo;

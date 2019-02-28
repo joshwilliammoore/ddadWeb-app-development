@@ -15,7 +15,7 @@
         if(empty($_POST["user_uid"])||empty($_POST["user_pwd"])){
             $message = '<label> ALL FIELDS ARE REQUIRED</label>';
         }else{
-            $query = "SELECT * FROM customer_login WHERE user_uid = :user_uid AND user_pwd = :user_pwd";
+            $query = "SELECT * FROM users WHERE user_uid = :user_uid AND user_pwd = :user_pwd";
             $statement = $connect->prepare($query);
             $statement->execute(array('user_uid'=>$_POST["user_uid"], 'user_pwd'=>$_POST["user_pwd"]));
             $count = $statement->rowCount();
