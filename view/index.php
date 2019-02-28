@@ -54,9 +54,9 @@ b[index-1].style.display="block";
 setTimeout(slide,5000);
 }
   </script>
+  
   <span id="team">
   <section class="team">
-  <center>
     <h1>Team</h1>
   <div class="team-wrapper">
     <div class="col-team">
@@ -84,7 +84,6 @@ setTimeout(slide,5000);
   </div>
     </div>
        </div>
-       </center>
        </section>
        </span>
 

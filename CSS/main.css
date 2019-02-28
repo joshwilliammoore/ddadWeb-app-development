@@ -48,9 +48,8 @@ Team Section
 .team-wrapper{
 	width: 90%;
 	padding-top: 50px;
-	marginr: auto;
+	margin: auto;
 }
-
 .col-team{
 	width: 33.33%;
 	float: left;
