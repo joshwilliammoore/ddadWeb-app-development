@@ -54,6 +54,7 @@ b[index-1].style.display="block";
 setTimeout(slide,5000);
 }
   </script>
+
   <span id="team">
   <section class="team">
   <center>
@@ -77,7 +78,7 @@ setTimeout(slide,5000);
     </div>
     <div class="col-team">
        <div class="col">
-        <img src="images.logo.jpg" alt="" width="200" height="95">
+        <img src="images/logo.jpg" alt="" width="200" height="95">
         <hr>
        <h3>Qasim Ali</h3>
        <p>intelligent</p>
