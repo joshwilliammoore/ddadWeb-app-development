@@ -38,7 +38,6 @@ function users(){
 /*
 function userLogin($username, $password){
 	global $pdo;
-	$statement = $pdo->prepare("SELECT username FROM customer_login LIKE '%{$username}%'")
 	$statement = $pdo->prepare("SELECT username FROM customer_login LIKE '%{$username}%'");
 	$statement = $pdo->execute([$username, $password]);
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "customer_login");
