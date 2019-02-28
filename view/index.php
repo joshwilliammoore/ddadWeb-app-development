@@ -5,6 +5,7 @@
 <html>
    <head>
       <link href="../CSS/main.css" rel="stylesheet" type="text/css">
+      <script> type="text/javascript" src="javascript.js"></script>
       <title>Home</title>
    </head>
    <ul class="nav">
