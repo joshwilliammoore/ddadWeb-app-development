@@ -39,13 +39,24 @@ function addNewVehicle($number_of_passengers, $model, $date_available, $price, $
 	$statement = $pdo->prepare("INSERT INTO vehicles (number_of_passengers, vehicleModel, date_available, price, driving_license_required) VALUES ($number_of_passengers, '$model', $date_available, $price, '$license')");
 	$statement ->execute([$number_of_passengers, $model, $date_available, $price, $license]);
 }
+
 function users(){
 
 }
 
 function userLogin($username, $password){
 	global $pdo;
-	$statement = $pdo->prepare("SELECT username FROM customer_login LIKE '%{$username}%'")
+	$statement = $pdo->prepare("SELECT username FROM customer_login LIKE '%{$username}%'");
+	$statement = $pdo->execute([$username, $password]);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "customer_login");
+	return results;
+}
+
+function addCustomer($fist_name, $second_name, $address, $email_address, $contact_number)
+{
+	global $pdo;
+	$statement = $pdo->prepare("INSERT INTO customers (customer_lastname, customer_firstname, customer_address, email_address, contact_number) VALUES ($second_name, $first_name, $address, $email_address, $contact_number)");
+	$statement ->execute([$second_name, $first_name, $address, $email_address, $contact_number]);
 }
 
 ?>
