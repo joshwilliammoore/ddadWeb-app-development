@@ -27,7 +27,7 @@ function getAllVehiclesPrice()
 function getVehiclesByPassengers($vehicle)
 	{
 	global $pdo;
-	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE driving_license_required LIKE '%{$vehicle}%' OR id LIKE '%{$vehicle}%' OR number_of_passengers LIKE '%{$vehicle}%' OR price LIKE '%{$vehicle}%' OR date_available LIKE '%{$vehicle}%'");
+	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE vehicleModel LIKE '%{$vehicle}%' OR driving_license_required LIKE '%{$vehicle}%' OR id LIKE '%{$vehicle}%' OR number_of_passengers LIKE '%{$vehicle}%' OR price LIKE '%{$vehicle}%' OR date_available LIKE '%{$vehicle}%'");
 	$statement->execute([$vehicle]);
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
 	return $results;
@@ -43,8 +43,9 @@ function users(){
 
 }
 
-function addNewUser(){
-	
+function userLogin($username, $password){
+	global $pdo;
+	$statement = $pdo->prepare("SELECT username FROM customer_login LIKE '%{$username}%'")
 }
 
 ?>
