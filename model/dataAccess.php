@@ -32,6 +32,28 @@ function getVehiclesByPassengers($vehicle)
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
 	return $results;
    }
+
+function addNewVehicle($number_of_passengers, $model, $date_available, $price, $license)
+ {
+ 	global $pdo;
+ 	$statement = $pdo->prepare("INSERT INTO vehicles (number_of_passengers, vehicleModel, date_available, price, driving_license_required) VALUES ($number_of_passengers, '$model', '$date_available', $price, '$license')");
+ 	$statement ->execute([$number_of_passengers, $model, $date_available, $price, $license]);
+ }
+
+function editVehicle($id, $number_of_passengers, $model, $date_available, $price, $license)
+{
+	global $pdo;
+ 	$statement = $pdo->prepare("UPDATE vehicles SET number_of_passengers=$number_of_passengers, vehicleModel='$model', date_available='$date_available', price=$price, driving_license_required='$license' WHERE id = $id");
+ 	$statement ->execute([$id, $number_of_passengers, $model, $date_available, $price, $license]);
+}
+
+function deleteVehicle($id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("DELETE FROM vehicles WHERE id = $id");
+ 	$statement ->execute([$id]);
+}
+ 
 function users(){
 
 }
