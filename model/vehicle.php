@@ -2,7 +2,7 @@
 class vehicle
 {
 	private $id;
-	private $vehicle_model;
+	private $vehicle_make;
 	private $number_of_passengers;
 	private $date_available;
 	private $price;
