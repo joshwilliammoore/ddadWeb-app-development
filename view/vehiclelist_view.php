@@ -41,7 +41,7 @@ Search for vehicle:
          <?php foreach ($results as $vehicle): ?>
             <tr>
                <td><?=$vehicle->id?></td>
-               <td><?=$vehicle->vehicleModel?></td>
+               <td><?=$vehicle->vehicle_make?></td>
                <td><?=$vehicle->number_of_passengers?></td>
                <td><?=$vehicle->date_available?></td>
                <td>£<?=$vehicle->price?></td>
