@@ -40,7 +40,7 @@ Search for vehicle:
          <tbody>
          <?php foreach ($results as $vehicle): ?>
             <tr>
-               <td><?=$vehicle->id?></td>
+               <td><?=$vehicle->vehicle_id?></td>
                <td><?=$vehicle->vehicle_make?></td>
                <td><?=$vehicle->number_of_passengers?></td>
                <td><?=$vehicle->date_available?></td>
@@ -50,10 +50,6 @@ Search for vehicle:
          <?php endforeach ?>
          </tbody>
       </table>
-      <div class="topcorner">
-      <form action="login_view.php">
-      <input type="submit" value="Log in"/>
-      </div>
 </form>
 </body>
 </html>
