@@ -54,11 +54,34 @@ function deleteVehicle($id)
  	$statement ->execute([$id]);
 }
 
+function getAllUsers()
+{
+  global $pdo;
+  $statement = $pdo->prepare('SELECT number_of_passengers, vehicle_make, price FROM vehicles');
+  $statement->execute();
+  $result = $statement->fetchAll(PDO::FETCH_CLASS, 'vehicle');
+  return $result;
+}
+
+function getUsersBySurname($surname)
+{
+  if ($surname == "")
+  {
+    return getAllUsers();
+  }
+  global $pdo;
+  $statement = $pdo->prepare('SELECT number_of_passengers, vehicle_make, price FROM vehicles
+                              WHERE vehicle_make = ?');
+  $statement->execute([$surname]);
+  $users = $statement->fetchAll(PDO::FETCH_CLASS, 'vehicle');
+  return $users;
+}
+
 function getUsersByStartOfSurname($partialSurname)
 {
   global $pdo;
-  $statement = $pdo->prepare('SELECT DISTINCT surname FROM customers
-                              WHERE surname like ?');
+  $statement = $pdo->prepare('SELECT DISTINCT vehicle_make FROM vehicles
+                              WHERE vehicle_make like ?');
   $statement->execute(["$partialSurname%"]);
   $users = $statement->fetchAll(PDO::FETCH_COLUMN, 0);
   return $users;
