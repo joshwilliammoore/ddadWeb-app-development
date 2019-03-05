@@ -54,7 +54,15 @@ b[index-1].style.display="block";
 setTimeout(slide,5000);
 }
   </script>
-
+<br><br><br>
+<ul id="menu">
+  <li><a href="vehiclelist_view.php">MPV</li>
+  <li><a href="vehiclelist_view.php">VIP COACH</li>
+  <li><a href="vehiclelist_view.php">MINIBUS</li>
+  <li><a href="vehiclelist_view.php">COACH</li>
+  <li><a href="vehiclelist_view.php">BUS</li>
+  <li><a id="temp" href="vehiclelist_view.php">MINI COACH</li>
+</ul>
   <span id="team">
   <section class="team">
   <center>
