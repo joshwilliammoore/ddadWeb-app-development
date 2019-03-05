@@ -20,7 +20,7 @@
             }
          ?>
          <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
-         <li><a href="information_view.php">INFORMATION</a></li>
+         <li><a href="Information_view.php">INFORMATION</a></li>
    </ul>
    <div class = "title">
          <h1>Berwyn Bus Hire</h1>
