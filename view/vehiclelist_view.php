@@ -21,7 +21,7 @@ require_once "../model/vehicle.php";
          <h1>Vehicle List</h1>
    </div>
    <body>
-   <form method="post" action="vehiclelist_view.php">
+<form method="post" action="vehiclelist_view.php">
    Select vehicle:
    <select name="vehicle">
       <option value="standard_mpv">Standard 6 Seat MPV</option>
@@ -40,7 +40,10 @@ require_once "../model/vehicle.php";
       <option value="49_vip_coach">49 Seat VIP Coach</option>
    </select>
    <input type="date" name="required_date">
-   
+   <input type="checkbox" name="driver_required">
+   <input type="submit" value="Add to Basket">
+</form>
+
 <form method="post" action="vehiclelist_view.php">
 Search for vehicle:
 <input name="search"/>
