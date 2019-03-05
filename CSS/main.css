@@ -74,3 +74,31 @@ Team Section
 	content: "";
 	display: table;
 }
+
+#menu{
+  list-style-type: none;
+  background-color: #E0E0E0;
+  padding: 15px;
+  margin-left: 250px;
+  width: 300;
+  box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.1);
+}
+
+#menu li{
+  margin: 0px;
+  border-bottom: 1px solid black;
+}
+
+#menu a{
+  padding: 15px 12px;
+  color:grey;
+  text-decoration: none;
+  letter-spacing:  0.1em;
+  font-size: 150%;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#temp{
+  border-bottom: none;
+}
+
