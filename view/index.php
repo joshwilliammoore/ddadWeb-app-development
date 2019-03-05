@@ -71,6 +71,28 @@ b[index-1].style.display="block";
 setTimeout(slide,5000);
 }
   </script>
+  <div class = "Promotions">
+  <h2> Promotions </h2>
+  <img class="frontEndSlideShow" src="images/promotion1.jpg">
+  <img class="frontEndSlideShow" src="images/promotion2.jpg">
+  <img class="frontEndSlideShow" src="images/promotion3.jpg">
+  </div>
+  <script>
+var index = 0;
+slide();
+function slide(){
+var b = document.getElementsByClassName("frontEndSlideshow");
+for(var a = 0;a<3;a++){
+b[a].style.display="none";
+}
+index++;
+if(index > 3){
+index=1;
+}
+b[index-1].style.display="block";
+setTimeout(slide,5000);
+}
+  </script>
 
   <span id="team">
   <section class="team">
