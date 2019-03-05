@@ -93,9 +93,9 @@ function users(){
 /*
 function userLogin($username, $password){
 	global $pdo;
-	$statement = $pdo->prepare("SELECT username FROM customer_login LIKE '%{$username}%'");
+	$statement = $pdo->prepare("SELECT username FROM customers LIKE '%{$username}%' AND SELECT paSsword FROM customers LIKE '%{$password}%'");
 	$statement = $pdo->execute([$username, $password]);
-	$results = $statement->fetchAll(PDO::FETCH_CLASS, "customer_login");
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "customers");
 	return results;
 }
 */
@@ -105,4 +105,14 @@ function addCustomer($fist_name, $second_name, $address, $email_address, $contac
 	$statement = $pdo->prepare("INSERT INTO customers (customer_lastname, customer_firstname, customer_address, email_address, contact_number) VALUES ($second_name, $first_name, $address, $email_address, $contact_number)");
 	$statement ->execute([$second_name, $first_name, $address, $email_address, $contact_number]);
 }
+
+/*function getMPV()
+{
+	global $pdo;
+	$statement = $pdo->("SELECT * FROM vehicle_model WHERE vehicle_model REGEXP 'MPV'");
+	$statement->execute();
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}*/
+
 ?>
