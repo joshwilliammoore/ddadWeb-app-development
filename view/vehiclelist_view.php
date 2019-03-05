@@ -16,6 +16,8 @@ require_once "../model/vehicle.php";
         <li><a href="login.php">LOGIN</a></li>
         <li><a href="signup.php">SIGNUP</a></li>
         <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
+        <li><a href="Information_view.php">INFORMATION</a></li>
+</ul>
    </ul>
    <div class = "title">
          <h1>Vehicle List</h1>
@@ -39,10 +41,13 @@ require_once "../model/vehicle.php";
       <option value="24_executive_coach">24 Seat Executive Mini</option>
       <option value="49_vip_coach">49 Seat VIP Coach</option>
    </select>
+   Required Date:
    <input type="date" name="required_date">
+   Driver Required:
    <input type="checkbox" name="driver_required">
    <input type="submit" value="Add to Basket">
 </form>
+<br>
 
 <form method="post" action="vehiclelist_view.php">
 Search for vehicle:
@@ -60,19 +65,7 @@ Search for vehicle:
     <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="clientcode-anon.js"></script>
 </head>
-<ul class="nav">
-    <li><a href="index.php">HOME</a></li>
-    <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
-    <li><a href="login.php">LOGIN</a></li>
-    <li><a href="signup.php">SIGNUP</a></li>
-    <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
-    <li><a href="Information_view.php">INFORMATION</a></li>
-</ul>
-<div class="title">
-    <h1>Vehicle List</h1>
-</div>
 
-<body>
 <div id="searchfield">
         <form action="vehiclelist_view.php" method="get">
             <input type="text" name="searchname" /> <input type="submit" value="Search" />
