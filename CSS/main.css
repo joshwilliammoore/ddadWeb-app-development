@@ -2,7 +2,6 @@
     text-align:center;
     color:rgb(15, 15, 15);
   }
-  <style>
   * {box-sizing: border-box;}
   
   body {
@@ -79,7 +78,6 @@
       border: 1px solid #ccc;  
     }
   }
-  </style>
 .slideShow{
   max-width:500px;
   margin-left: auto;
