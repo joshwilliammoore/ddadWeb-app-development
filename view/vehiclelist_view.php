@@ -49,11 +49,7 @@ require_once "../model/vehicle.php";
 </form>
 <br>
 
-<form method="post" action="vehiclelist_view.php">
-Search for vehicle:
-<input name="search"/>
-<input type="submit" value="Search!"/>
-</form>
+
       <table>
          <thead>
 
