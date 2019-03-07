@@ -11,12 +11,12 @@
    <body>
 
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#about">Vehicle List</a>
-  <a href="#contact">Admin Tools</a>
-  <a href="#contact">Sign up</a>
+  <a class="active" href="index.php">Home</a>
+  <a href="vehiclelist_view.php">Vehicle List</a>
+  <a href="admintools_view.php">Admin Tools</a>
+  <a href="signup.php">Sign up</a>
   <div class="login-container">
-    <form action="/action_page.php">
+    <form action="login.php">
       <input type="text" placeholder="Username" name="username">
       <input type="text" placeholder="Password" name="psw">
       <button type="submit">Login</button>
