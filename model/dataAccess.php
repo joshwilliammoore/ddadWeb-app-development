@@ -33,6 +33,15 @@ function getVehiclesByPassengers($vehicle)
 	return $results;
    }
 
+function getVehiclesByVehicle($vehicle)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE vehicle_make LIKE '%{$vehicle}%'");
+	$statement->execute($vehicle);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+
 function addNewVehicle($number_of_passengers, $model, $date_available, $price, $license)
  {
  	global $pdo;
