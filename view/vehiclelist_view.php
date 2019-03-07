@@ -84,6 +84,13 @@ require_once "../model/vehicle.php";
 
 <div id="searchfield">
         <form action="vehiclelist_view.php" method="get">
+        <select name="field">
+            <option value="vehicle">Vehicle</option>
+            <option value="passengers_no">Number of Passengers</option>
+            <option value="date">Required Date</option>
+            <option value="price">Price</option>
+            <option value="license">License Required</option>
+        </select>
             <input type="text" name="searchname" /> <input type="submit" value="Search" />
         </form>
         <div class="results">
