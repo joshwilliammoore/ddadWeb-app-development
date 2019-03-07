@@ -8,7 +8,24 @@
       <script> type="text/javascript" src="javascript.js"></script>
       <title>Home</title>
    </head>
-   <ul class="nav">
+   <body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">Vehicle List</a>
+  <a href="#contact">Admin Tools</a>
+  <a href="#contact">Sign up</a>
+  <div class="login-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+
+   <!--<ul class="nav">
         <li><a href="index.php">HOME</a></li>
         <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
         <?php
@@ -20,7 +37,7 @@
             }
          ?>
          <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
-   </ul>
+   </ul>-->
    <div class = "title">
          <h1>Berwyn Bus Hire</h1>
       <?php
@@ -39,6 +56,37 @@
 <img class="frontEndSlideshow" src="images/bus3.jpg">
 </div>
 <script>
+var index = 0;
+slide();
+function slide(){
+var b = document.getElementsByClassName("frontEndSlideshow");
+for(var a = 0;a<3;a++){
+b[a].style.display="none";
+}
+index++;
+if(index > 3){
+index=1;
+}
+b[index-1].style.display="block";
+setTimeout(slide,5000);
+}
+  </script>
+<br><br><br>
+<ul id="menu">
+  <li><a href="vehiclelist_view.php">MPV</li>
+  <li><a href="vehiclelist_view.php">VIP COACH</li>
+  <li><a href="vehiclelist_view.php">MINIBUS</li>
+  <li><a href="vehiclelist_view.php">COACH</li>
+  <li><a href="vehiclelist_view.php">BUS</li>
+  <li><a id="temp" href="vehiclelist_view.php">MINI COACH</li>
+</ul>
+  <div class = "Promotions">
+  <h2> Promotions </h2>
+  <img class="frontEndSlideShow" src="images/promotion1.jpg">
+  <img class="frontEndSlideShow" src="images/promotion2.jpg">
+  <img class="frontEndSlideShow" src="images/promotion3.jpg">
+  </div>
+  <script>
 var index = 0;
 slide();
 function slide(){

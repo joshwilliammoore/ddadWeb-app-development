@@ -1,10 +1,10 @@
 <?php
 class vehicle
 {
-	private $id;
+	private $vehicle_id;
+	private $vehicle_type;
 	private $vehicle_model;
 	private $number_of_passengers;
-	private $date_available;
 	private $price;
 	private $driving_license_required;
 
