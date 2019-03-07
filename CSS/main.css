@@ -8,6 +8,10 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
+  .hero{
+    background: linear-gradient(to bottom right, #abbaab, #8e9eab
+ );
+  }
   
   .topnav {
     overflow: hidden;

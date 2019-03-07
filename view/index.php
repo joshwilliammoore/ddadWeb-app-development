@@ -9,7 +9,7 @@
       <title>Home</title>
    </head>
    <body>
-
+   <section class="hero">
 <div class="topnav">
   <a class="active" href="index.php">Home</a>
   <a href="vehiclelist_view.php">Vehicle List</a>
@@ -101,6 +101,7 @@ index=1;
 b[index-1].style.display="block";
 setTimeout(slide,5000);
 }
+</section>
   </script>
 
   <span id="team">
