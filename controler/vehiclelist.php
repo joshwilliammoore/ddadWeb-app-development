@@ -9,7 +9,7 @@ if (!isset($_REQUEST["searchname"]))
 else
 {
     $search = $_REQUEST["searchname"];
-    $results = getVehiclesByVehicles($search);
+    $results = getVehiclesByAll($search);
 }
 
 ?>
