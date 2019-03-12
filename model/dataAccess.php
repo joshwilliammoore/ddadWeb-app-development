@@ -15,7 +15,7 @@ function getAllVehicles()
 	return $results;
 	}
 
-function getAllVehiclesPrice()
+function getAllVehiclesprice()
 	{
 	global $pdo;
 	$statement = $pdo->prepare("SELECT * FROM vehicles ORDER BY vehicles.price ASC");
@@ -24,7 +24,7 @@ function getAllVehiclesPrice()
 	return $results;
 	}
 
-function getVehiclesByPassengers($vehicle)
+function getVehiclesByAll($vehicle)
 	{
 	global $pdo;
 	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE driving_license_required LIKE '%{$vehicle}%' OR vehicle_id LIKE '%{$vehicle}%' OR number_of_passengers >= '{$vehicle}' OR price <= '{$vehicle}' OR date_available LIKE '%{$vehicle}%' OR vehicle_make LIKE '%{$vehicle}%'");
@@ -37,6 +37,42 @@ function getVehiclesByVehicle($vehicle)
 {
 	global $pdo;
 	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE vehicle_make LIKE '%{$vehicle}%'");
+	$statement->execute($vehicle);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+
+function getVehiclesByPassengers($vehicle)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE number_of_passengers >= '{$vehicle}'");
+	$statement->execute($vehicle);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+
+function getVehiclesByDate($vehicle)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE date_available <= '{$vehicle}'");
+	$statement->execute($vehicle);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+
+function getVehiclesByPrice($vehicle)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE price <= '{$vehicle}' ORDER BY price ASC");
+	$statement->execute($vehicle);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+
+function getVehiclesByLicense($vehicle)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE driving_license_required LIKE '%{$vehicle}%'");
 	$statement->execute($vehicle);
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
 	return $results;
