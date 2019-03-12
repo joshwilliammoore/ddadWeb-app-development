@@ -17,31 +17,13 @@ require_once "../model/vehicle.php";
         <li><a href="signup.php">SIGNUP</a></li>
         <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
         <li><a href="Information_view.php">INFORMATION</a></li>
+        <li><a id="basket" href="basket.php">0</a></li>
 </ul>
    </ul>
    <div class = "title">
          <h1>Vehicle List</h1>
    </div>
    <body>
-   <form method="post" action="vehiclelist_view.php">
-   Select vehicle:
-   <select name="vehicle">
-      <option value="standard_mpv">Standard 6 Seat MPV</option>
-      <option value="executive_mpv">Executive 8 Seat MPV</option>
-      <option value="10_vip_coach">10 Seat VIP Coach</option>
-      <option value="14_standard_minibus">14 Seat Standard Minibus</option>
-      <option value="16_standard_minibus">16 Seat Standard Minibus</option>
-      <option value="16_standard_coach">16 Seat Standard Coach</option>
-      <option value="24_standard_coach">24 Seat Standard Coach</option>
-      <option value="33_standard_coach">33 Seat Standard Coach</option>
-      <option value="49_standard_coach">49 Seat Standard Coach</option>
-      <option value="double_coach">73 Seat Double Deck Coach</option>
-      <option value="bus">72 Seat Bus</option>
-      <option value="16_executive_coach">16 Seat Executive Mini</option>
-      <option value="24_executive_coach">24 Seat Executive Mini</option>
-      <option value="49_vip_coach">49 Seat VIP Coach</option>
-   </select>
-   <input type="date" name="required_date">
    
 <form method="post" action="vehiclelist_view.php">
    Select vehicle:
@@ -106,6 +88,7 @@ require_once "../model/vehicle.php";
                 <th>Date available</th>
                 <th>Price</th>
                 <th>Driving license required</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -117,6 +100,7 @@ require_once "../model/vehicle.php";
                 <td><?=$vehicle->date_available?></td>
                 <td>£<?=$vehicle->price?></td>
                 <td><?=$vehicle->driving_license_required?></td>
+                <td><input type="submit" value="Add to Basket" /></td>
             </tr>
             <?php endforeach ?>
         </tbody>
