@@ -9,7 +9,7 @@ if (!isset($_REQUEST["searchname"]))
 elseif($_POST['value']== 'vehicle')
 {
     $search = $_REQUEST["searchname"];
-    $results = getVehiclesByPassengers($search);
+    $results = getVehiclesByVehicles($search);
 }
 elseif($_POST['value']== 'passengers_no')
 {
@@ -19,16 +19,16 @@ elseif($_POST['value']== 'passengers_no')
 elseif($_POST['value']== 'date')
 {
     $search = $_REQUEST["searchname"];
-    $results = getVehiclesByPassengers($search);
+    $results = getVehiclesByDate($search);
 }
 elseif($_POST['value']== 'price')
 {
     $search = $_REQUEST["searchname"];
-    $results = getVehiclesByPassengers($search);
+    $results = getVehiclesByPrice($search);
 }
 elseif($_POST['value']== 'license')
 {
     $search = $_REQUEST["searchname"];
-    $results = getVehiclesByPassengers($search);
+    $results = getVehiclesByLicense($search);
 }
 ?>
