@@ -1,7 +1,7 @@
 <?php
 class Basket
 {
-    private number;
+	private $id;
 
     function __get($id)
 	{
