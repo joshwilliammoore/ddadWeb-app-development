@@ -8,7 +8,7 @@ if (!isset($_REQUEST["searchname"]))
 }
 elseif($_POST['value']== 'vehicle')
 {
-    $search = $_REQUEST["searchname"];
+    Test$search = $_REQUEST["searchname"];
     $results = getVehiclesByVehicles($search);
 }
 elseif($_POST['value']== 'passengers_no')
