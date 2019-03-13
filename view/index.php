@@ -46,11 +46,6 @@
   <a href="vehiclelist_view.php">Vehicle List</a>
   <a href="admintools_view.php">Admin Tools</a>
   <a href="signup.php">Sign up</a>
-  <?php
-        if(isset($message)){
-            echo '<label>'.$message.'</label>';
-        }
-    ?>
   <div class="login-container">
     <form method="post">
       <input type="text" name="user_uid" placeholder="Username" name="username">
