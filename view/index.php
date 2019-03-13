@@ -73,6 +73,7 @@ setTimeout(slide,5000);
   </script>
 <br><br><br>
 <ul id="menu">
+  <li><a href="newVehiclelist_view.php">New Vehicles</li>
   <li><a href="vehiclelist_view.php">MPV</li>
   <li><a href="vehiclelist_view.php">VIP COACH</li>
   <li><a href="vehiclelist_view.php">MINIBUS</li>
