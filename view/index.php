@@ -1,5 +1,36 @@
 <?php
    session_start();
+   
+   $host= "kunet";
+   $username= "k1745856";
+   $password= "Badpassword";
+   $database= "db_k1745856";  
+   $message= "";
+
+   try{
+    $connect = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+    $connect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+    if(isset($_POST["login"])){
+        if(empty($_POST["user_uid"])||empty($_POST["user_pwd"])){
+            $message = '<label> ALL FIELDS ARE REQUIRED</label>';
+        }else{
+            $query = "SELECT * FROM users WHERE user_uid = :user_uid AND user_pwd = :user_pwd";
+            $statement = $connect->prepare($query);
+            $statement->execute(array('user_uid'=>$_POST["user_uid"], 'user_pwd'=>$_POST["user_pwd"]));
+            $count = $statement->rowCount();
+            if($count > 0){
+                $_SESSION["user_uid"] = $_POST["user_uid"];
+                header("location:login_succsess.php");
+            }else{
+                $message ='<label>Wrong Data</label>';
+            }
+        }
+    }
+   }
+   catch(PDOExeption $error){
+    $message = $error->getMessage();
+   }
 ?>
 <!doctype html5>
 <html>
@@ -15,14 +46,20 @@
   <a href="vehiclelist_view.php">Vehicle List</a>
   <a href="admintools_view.php">Admin Tools</a>
   <a href="signup.php">Sign up</a>
-  <div class="login-container">
-    <form action="login.php">
-      <input type="text" placeholder="Username" name="username">
-      <input type="text" placeholder="Password" name="psw">
-      <button type="submit">Login</button>
+  <?php
+        if(isset($message)){
+            echo '<label>'.$message.'</label>';
+        }
+    ?>
+  <div class="post">
+    <form method="post">
+      <input type="text" name="user_uid" placeholder="Username" name="username">
+      <input type="text" name="user_pwd" placeholder="Password" name="psw">
+      <button type="submit" name="login" value="Login">Login</button>
     </form>
   </div>
 </div>
+
 
 
    <!--<ul class="nav">

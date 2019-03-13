@@ -38,7 +38,7 @@
     color: white;
   }
   
-  .topnav .login-container {
+  .topnav .post {
     float: right;
   }
   
@@ -50,7 +50,7 @@
     width:120px;
   }
   
-  .topnav .login-container button {
+  .topnav .post button {
     float: right;
     padding: 6px 10px;
     margin-top: 8px;
@@ -62,7 +62,7 @@
     cursor: pointer;
   }
   
-  .topnav .login-container button:hover {
+  .topnav .post button:hover {
     background-color: green;
   }
   
@@ -70,7 +70,7 @@
     .topnav .login-container {
       float: none;
     }
-    .topnav a, .topnav input[type=text], .topnav .login-container button {
+    .topnav a, .topnav input[type=text], .topnav .post button {
       float: none;
       display: block;
       text-align: left;
