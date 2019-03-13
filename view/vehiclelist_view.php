@@ -10,16 +10,19 @@ require_once "../model/vehicle.php";
       <link href="../CSS/table.css" rel="stylesheet" type="text/css">
       <link href="../CSS/main.css" rel="stylesheet" type="text/css">
    </head>
-   <ul class="nav">
-        <li><a href="index.php">HOME</a></li>
-        <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
-        <li><a href="login.php">LOGIN</a></li>
-        <li><a href="signup.php">SIGNUP</a></li>
-        <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
-        <li><a href="Information_view.php">INFORMATION</a></li>
-        <li><a id="basket" href="basket.php">0</a></li>
-</ul>
-   </ul>
+<div class="topnav">
+  <a class="active" href="index.php">Home</a>
+  <a href="vehiclelist_view.php">Vehicle List</a>
+  <a href="admintools_view.php">Admin Tools</a>
+  <a href="signup.php">Sign up</a>
+  <div class="login-container">
+    <form action="login.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
    <div class = "title">
          <h1>Vehicle List</h1>
    </div>
@@ -101,6 +104,20 @@ require_once "../model/vehicle.php";
                 <td>£<?=$vehicle->price?></td>
                 <td><?=$vehicle->driving_license_required?></td>
                 <td><input type="submit" value="Add to Basket" /></td>
+            </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+    <ul class="wrapper">
+            <?php foreach ($results as $vehicle): ?>
+            <li class="allignment">
+                <li class="box a"><?=$vehicle->vehicle_id?>
+                            <br/><?=$vehicle->vehicle_make?>
+                            <br/><?=$vehicle->number_of_passengers?>
+                            <br/><?=$vehicle->date_available?>
+                            <br/><?=$vehicle->price?>
+                            <br/><?=$vehicle->driving_license_required?>
+                            <br/><input type="submit" value="Add to Basket" /></td>
             </tr>
             <?php endforeach ?>
         </tbody>
