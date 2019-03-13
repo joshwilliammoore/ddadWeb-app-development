@@ -1,6 +1,14 @@
 <?php
 require_once "../model/dataAccess.php";
 require_once "../controler/admintools.php";
+
+if(!isset($_SESSION)) session_start();
+   
+if(!isset($_SESSION["adminLoggedIn"]))
+{
+   header("location: ../controler/logincontroller.php");
+   exit();
+}
 ?>
 <!doctype html>
 <html>
@@ -10,14 +18,19 @@ require_once "../controler/admintools.php";
     <link href="../CSS/table.css" rel="stylesheet" type="text/css">
     <link href="../CSS/main.css" rel="stylesheet" type="text/css">
 </head>
-<ul class="nav">
-    <li><a href="index.php">HOME</a></li>
-    <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
-    <li><a href="login.php">LOGIN</a></li>
-    <li><a href="signup.php">SIGNUP</a></li>
-    <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
-    <li><a href="Information_view.php">INFORMATION</a></li>
-</ul>
+<div class="topnav">
+  <a class="active" href="index.php">Home</a>
+  <a href="vehiclelist_view.php">Vehicle List</a>
+  <a href="admintools_view.php">Admin Tools</a>
+  <a href="signup.php">Sign up</a>
+  <div class="login-container">
+    <form action="login.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
 <div class="title">
     <h1>Admin tools</h1>
 </div>
