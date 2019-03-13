@@ -40,19 +40,19 @@ if(!isset($_SESSION["adminLoggedIn"]))
 <body>
     <form method="post" action="admintools_view.php">
         Enter the id of the record you would like to edit:
-        <input name="idRecord">
+        <input name="idRecord" required>
         <br>
         Amount of passengers:
-        <input name="passengerAmmount" />
+        <input name="passengerAmmount" required/>
         <br>
         Model:
-        <input name="model" />
+        <input name="model" required/>
         <br>
         Date:
-        <input name="Date" type="date" />
+        <input name="Date" type="date" required/>
         <br>
         Price:
-        <input name="price" />
+        <input name="price" required/>
         <br>
         License:
         <select name="license">

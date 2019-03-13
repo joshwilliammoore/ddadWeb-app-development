@@ -1,5 +1,36 @@
 <?php
    session_start();
+   
+   $host= "kunet";
+   $username= "k1745856";
+   $password= "Badpassword";
+   $database= "db_k1745856";  
+   $message= "";
+
+   try{
+    $connect = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+    $connect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+    if(isset($_POST["login"])){
+        if(empty($_POST["user_uid"])||empty($_POST["user_pwd"])){
+            $message = '<label> ALL FIELDS ARE REQUIRED</label>';
+        }else{
+            $query = "SELECT * FROM users WHERE user_uid = :user_uid AND user_pwd = :user_pwd";
+            $statement = $connect->prepare($query);
+            $statement->execute(array('user_uid'=>$_POST["user_uid"], 'user_pwd'=>$_POST["user_pwd"]));
+            $count = $statement->rowCount();
+            if($count > 0){
+                $_SESSION["user_uid"] = $_POST["user_uid"];
+                header("location:login_succsess.php");
+            }else{
+                $message ='<label>Wrong Data</label>';
+            }
+        }
+    }
+   }
+   catch(PDOExeption $error){
+    $message = $error->getMessage();
+   }
 ?>
 <!doctype html5>
 <html>
@@ -16,26 +47,20 @@
   <a href="admintools_view.php">Admin Tools</a>
   <a href="signup.php">Sign up</a>
   <div class="login-container">
-    <form action="login.php">
-      <input type="text" placeholder="Username" name="username">
-      <input type="text" placeholder="Password" name="psw">
-      <button type="submit">Login</button>
+    <form method="post">
+      <input type="text" name="user_uid" placeholder="Username" name="username">
+      <input type="text" name="user_pwd" placeholder="Password" name="psw">
+      <button type="submit"name="login"  value="Login">Login</button>
     </form>
   </div>
 </div>
 
 
+
    <!--<ul class="nav">
         <li><a href="index.php">HOME</a></li>
         <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
-        <?php
-            if(isset($_SESSION["user_uid"])){
-               echo'<li><a href="logout.php">LOGOUT</a></li>';
-            }else{
-               echo'<li><a href="login.php">LOGIN</a></li>';
-               echo'<li><a href="signup.php">SIGNUP</a></li>';
-            }
-         ?>
+        
          <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
    </ul>-->
    <div class = "title">
@@ -73,6 +98,7 @@ setTimeout(slide,5000);
   </script>
 <br><br><br>
 <ul id="menu">
+  <li><a href="newVehiclelist_view.php">New Vehicles</li>
   <li><a href="vehiclelist_view.php">MPV</li>
   <li><a href="vehiclelist_view.php">VIP COACH</li>
   <li><a href="vehiclelist_view.php">MINIBUS</li>
