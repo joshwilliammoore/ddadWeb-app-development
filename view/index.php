@@ -60,14 +60,7 @@
    <!--<ul class="nav">
         <li><a href="index.php">HOME</a></li>
         <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
-        <?php
-            if(isset($_SESSION["user_uid"])){
-               echo'<li><a href="logout.php">LOGOUT</a></li>';
-            }else{
-               echo'<li><a href="login.php">LOGIN</a></li>';
-               echo'<li><a href="signup.php">SIGNUP</a></li>';
-            }
-         ?>
+        
          <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
    </ul>-->
    <div class = "title">
