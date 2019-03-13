@@ -41,14 +41,22 @@
     </head>
 
     <header>
-        <ul class="nav">
+        <!--<ul class="nav">
             <li><a href="index.php">HOME</a></li>
             <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
             <li><a href="login.php">LOGIN</a></li>
             <li><a href="signup.php">SIGNUP</a></li>
             <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
             <li><a href="Information_view.php">INFORMATION</a></li>
-        </ul>
+        </ul>-->
+        <section class="hero">
+<div class="topnav">
+  <a class="active" href="index.php">Home</a>
+  <a href="vehiclelist_view.php">Vehicle List</a>
+  <a href="admintools_view.php">Admin Tools</a>
+  <a href="signup.php">Sign up</a>
+  <div class="login-container">
+</section>
     </header>
     <div class = "title">
          <h1>Login</h1>
