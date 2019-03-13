@@ -53,9 +53,9 @@
     ?>
   <div class="login-container">
     <form method="post">
-      <input type="text" placeholder="Username" name="username">
-      <input type="text" placeholder="Password" name="psw">
-      <button type="submit">Login</button>
+      <input type="text" name="user_uid" placeholder="Username" name="username">
+      <input type="text" name="user_pwd" placeholder="Password" name="psw">
+      <button type="submit"name="login"  value="Login">Login</button>
     </form>
   </div>
 </div>
