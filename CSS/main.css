@@ -5,9 +5,11 @@
   * {box-sizing: border-box;}
   
   body {
-    margin: 0;
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+
   .hero{
     background: linear-gradient(to bottom right, #abbaab, #8e9eab
  );
@@ -155,9 +157,5 @@ Team Section
 
 #temp{
   border-bottom: none;
-}
-
-#basket{
-  text-align: right;
 }
 

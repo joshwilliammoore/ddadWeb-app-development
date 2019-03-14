@@ -143,4 +143,40 @@ function addCustomer($fist_name, $second_name, $address, $email_address, $contac
 	return $results;
 }*/
 
+function getUsernameAndPassword($username,$pssword)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT customer_lastname,customer_firstname,customer_address,email_address,contact_number FROM customers
+								WHERE username = ? AND password = ?");
+	$statement->execute([$username,$pssword]);
+	$result = $statement->fetchAll(PDO::FETCH_CLASS, 'customers');
+
+	if(count($result)!=0)
+	{
+		return $result[0];
+	}
+	else
+	{
+		return false;
+	}
+}
+
+	function getAdminUsernameAndPassword($username,$pssword)
+	{
+		global $pdo;
+		$statement = $pdo->prepare("SELECT first_name,last_name,address,home_telephone,DoB,salary FROM employees
+									WHERE username = ? AND password = ?");
+		$statement->execute([$username,$pssword]);
+		$result = $statement->fetchAll(PDO::FETCH_CLASS, 'employee');
+	
+		if(count($result)!=0)
+		{
+			return $result[0];
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 ?>
