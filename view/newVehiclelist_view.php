@@ -25,7 +25,7 @@ require_once "../model/vehicle.php";
    </div>
    <body>
    
-<form method="post" action="vehiclelist_view.php">
+<form method="post" action="newVehiclelist_view.php">
    Select vehicle:
    <select name="vehicle">
       <option value="standard_mpv">Standard 6 Seat MPV</option>

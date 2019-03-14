@@ -15,6 +15,15 @@ function getAllVehicles()
 	return $results;
 	}
 
+	function getNewVehicles()
+	{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM vehicles ORDER BY vehicles.vehicle_date DESC LIMIT 5");
+	$statement->execute();
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+	}
+
 function getAllVehiclesprice()
 	{
 	global $pdo;
