@@ -99,29 +99,6 @@ function deleteVehicle($id)
  	$statement ->execute([$id]);
 }
 
-function getAllUsers()
-{
-  global $pdo;
-  $statement = $pdo->prepare('SELECT number_of_passengers, vehicle_make, price FROM vehicles');
-  $statement->execute();
-  $result = $statement->fetchAll(PDO::FETCH_CLASS, 'vehicle');
-  return $result;
-}
-
-function getUsersBySurname($surname)
-{
-  if ($surname == "")
-  {
-    return getAllUsers();
-  }
-  global $pdo;
-  $statement = $pdo->prepare('SELECT number_of_passengers, vehicle_make, price FROM vehicles
-                              WHERE vehicle_make = ?');
-  $statement->execute([$surname]);
-  $users = $statement->fetchAll(PDO::FETCH_CLASS, 'vehicle');
-  return $users;
-}
-
 function getUsersByStartOfSurname($partialSurname)
 {
   global $pdo;
@@ -130,6 +107,12 @@ function getUsersByStartOfSurname($partialSurname)
   $statement->execute(["$partialSurname%"]);
   $users = $statement->fetchAll(PDO::FETCH_COLUMN, 0);
   return $users;
+}
+
+function addPromotion($vehicleID, $discountAmount, $endDate){
+	global $pdo;
+	$statement = $pdo -> prepare ("INSERT INTO promotional (vehicleID, discount, endDate) VALUES ('$vehicleID', '$discountAmount', '$endDate')");
+	$statement ->execute([$vehicleID, $discountAmount, $endDate]);
 }
  
 function users(){
