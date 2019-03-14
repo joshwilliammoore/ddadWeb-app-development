@@ -1,3 +1,8 @@
+<?php
+require_once "../controler/newVehicleList.php";
+require_once "../model/dataAccess.php";
+require_once "../model/vehicle.php";
+?>
 <!doctype html>
 <html>
    <head>
@@ -16,7 +21,7 @@
 </ul>
    </ul>
    <div class = "title">
-         <h1>Vehicle List</h1>
+         <h1>Latest Vehicles</h1>
    </div>
    <body>
    
