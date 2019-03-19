@@ -56,7 +56,7 @@
   <a href="admintools_view.php">Admin Tools</a>
   <a href="signup.php">Sign up</a>
   <div class="login-container">
-</section>
+</section>]
     </header>
     <div class = "title">
          <h1>Login</h1>
