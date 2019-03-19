@@ -8,7 +8,7 @@ if (!isset($_REQUEST["surname"]))
   echo json_encode([]);
 }
 else {
-  $names = getUsersByStartOfSurname($_REQUEST["surname"]);
-  echo json_encode($names);
+  $vehicles = getVehiclesByStartOfVehicle($_REQUEST["surname"]);
+  echo json_encode($vehicles);
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-class Employees
+class employee
 {
     private $id;
     private $first_name;
@@ -19,6 +19,7 @@ class Employees
 	function __set($id,$value)
 	{
 		$this->$id = $value;
-	}
+    }
+}
 	
 ?>

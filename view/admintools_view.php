@@ -1,6 +1,14 @@
 <?php
 require_once "../model/dataAccess.php";
 require_once "../controler/admintools.php";
+
+if(!isset($_SESSION)) session_start();
+   
+if(!isset($_SESSION["adminLoggedIn"]))
+{
+   header("location: ../controler/logincontroller.php");
+   exit();
+}
 ?>
 <!doctype html>
 <html>
@@ -10,16 +18,24 @@ require_once "../controler/admintools.php";
     <link href="../CSS/table.css" rel="stylesheet" type="text/css">
     <link href="../CSS/main.css" rel="stylesheet" type="text/css">
 </head>
-<ul class="nav">
-    <li><a href="index.php">HOME</a></li>
-    <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
-    <li><a href="login.php">LOGIN</a></li>
-    <li><a href="signup.php">SIGNUP</a></li>
-    <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
-    <li><a href="Information_view.php">INFORMATION</a></li>
-</ul>
+<div class="topnav">
+  <a class="active" href="index.php">Home</a>
+  <a href="vehiclelist_view.php">Vehicle List</a>
+  <a href="admintools_view.php">Admin Tools</a>
+  <a href="signup.php">Sign up</a>
+  <div class="login-container">
+    <form action="login.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
 <div class="title">
     <h1>Admin tools</h1>
+</div>
+<div class="title">
+    <h2>Vehicles manipulations</h2>
 </div>
 <h2>Adding/editing/deleting a vehicle</h2>
 <p>Only type in an ID if you are editing a vehicle</p>
@@ -30,16 +46,16 @@ require_once "../controler/admintools.php";
         <input name="idRecord" required>
         <br>
         Amount of passengers:
-        <input name="passengerAmmount" required/>
+        <input name="passengerAmmount" required />
         <br>
         Model:
-        <input name="model" required/>
+        <input name="model" required />
         <br>
         Date:
-        <input name="Date" type="date" required/>
+        <input name="Date" type="date" required />
         <br>
         Price:
-        <input name="price" required/>
+        <input name="price" required />
         <br>
         License:
         <select name="license">
@@ -52,6 +68,24 @@ require_once "../controler/admintools.php";
         <input type="submit" name="editVehicle" value="Edit record" />
         <input type="submit" name="deleteVehicle" value="Delete record" />
     </form>
+    <div>
+        <div class="title">
+            <h2>Promotional features</h2>
+        </div>
+        <p>Here you can create promotional materials</p>
+        <form method="post" action="admintools_view.php">
+            Enter ID of vehicle:
+            <input name="idVehicle">
+            <br>
+            Enter discount amount:
+            <input name="discountAmount">
+            <br>
+            Enter end date:
+            <input name="endDate" type="date">
+            <br>
+            <input type="submit" name="addPromotion" value="Add promotion">
+        </form>
+    </div>
 </body>
 
 </html>

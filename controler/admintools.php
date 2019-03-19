@@ -30,4 +30,10 @@ else if (isset($_POST["deleteVehicle"])){
     $id = $_REQUEST["idRecord"];
     $results = deleteVehicle($id);
 }
+else if (isset($_POST["addPromotion"])){
+    $id = $_REQUEST["idVehicle"];
+    $discount = $_REQUEST["discountAmount"];
+    $date = $_REQUEST["endDate"];
+    $results = addPromotion($id, $discount, $date);
+}
 ?>
