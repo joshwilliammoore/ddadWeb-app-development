@@ -34,31 +34,6 @@
 ?>
 <!doctype html5>
 <html>
-<<<<<<< HEAD
-   <head>
-      <link href="../CSS/main.css" rel="stylesheet" type="text/css">
-      <script> type="text/javascript" src="javascript.js"></script>
-      <title>Home</title>
-   </head>
-   <body>
-   <section class="hero">
-<div class="topnav">
-  <a class="active" href="index.php">Home</a>
-  <a href="vehiclelist_view.php">Vehicle List</a>
-  <a href="admintools_view.php">Admin Tools</a>
-  <a href="signup.php">Sign up</a>
-  <div class="login-container">
-    <form method="post">
-      <input type="text" name="user_uid" placeholder="Username" name="username">
-      <input type="text" name="user_pwd" placeholder="Password" name="psw">
-      <button type="submit"name="login"  value="Login">Login</button>
-    </form>
-  </div>
-</div>
-   <div class = "title">
-         <h1>Berwyn Bus Hire</h1>
-      <?php
-=======
 
 <head>
     <link href="../CSS/main.css" rel="stylesheet" type="text/css">
@@ -96,7 +71,6 @@
         <div class="title">
             <h1>Berwyn Bus Hire</h1>
             <?php
->>>>>>> d9516dccb5ab047f3d90460e476ded4e596cc47b
          if(isset($_SESSION["user_uid"])){
             echo'<h3>Welcome</h3>';
             echo $_SESSION["user_uid"];
