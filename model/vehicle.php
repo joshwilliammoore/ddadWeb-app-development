@@ -7,6 +7,7 @@ class vehicle
 	private $number_of_passengers;
 	private $price;
 	private $driving_license_required;
+	private $vehicle_date;
 
 	function __get($name)
 	{

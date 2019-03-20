@@ -34,6 +34,9 @@ if(!isset($_SESSION["adminLoggedIn"]))
 <div class="title">
     <h1>Admin tools</h1>
 </div>
+<div class="title">
+    <h2>Vehicles manipulations</h2>
+</div>
 <h2>Adding/editing/deleting a vehicle</h2>
 <p>Only type in an ID if you are editing a vehicle</p>
 
@@ -43,16 +46,16 @@ if(!isset($_SESSION["adminLoggedIn"]))
         <input name="idRecord" required>
         <br>
         Amount of passengers:
-        <input name="passengerAmmount" required/>
+        <input name="passengerAmmount" required />
         <br>
         Model:
-        <input name="model" required/>
+        <input name="model" required />
         <br>
         Date:
-        <input name="Date" type="date" required/>
+        <input name="Date" type="date" required />
         <br>
         Price:
-        <input name="price" required/>
+        <input name="price" required />
         <br>
         License:
         <select name="license">
@@ -65,6 +68,24 @@ if(!isset($_SESSION["adminLoggedIn"]))
         <input type="submit" name="editVehicle" value="Edit record" />
         <input type="submit" name="deleteVehicle" value="Delete record" />
     </form>
+    <div>
+        <div class="title">
+            <h2>Promotional features</h2>
+        </div>
+        <p>Here you can create promotional materials</p>
+        <form method="post" action="admintools_view.php">
+            Enter ID of vehicle:
+            <input name="idVehicle">
+            <br>
+            Enter discount amount:
+            <input name="discountAmount">
+            <br>
+            Enter end date:
+            <input name="endDate" type="date">
+            <br>
+            <input type="submit" name="addPromotion" value="Add promotion">
+        </form>
+    </div>
 </body>
 
 </html>
