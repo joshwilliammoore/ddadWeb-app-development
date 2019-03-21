@@ -141,30 +141,30 @@
             <span id="team">
                 <section class="team">
                     <center>
-                        <h1>Team</h1>
+                        <h1>Promotions</h1>
                         <div class="team-wrapper">
                             <div class="col-team">
                                 <div class="col">
-                                    <img src="images/logo.jpg" alt="pic" width="200" height="95">
+                                    <img src="images/bus1.jpg" alt="pic" width="200" height="95">
                                     <hr>
-                                    <h3>Abu</h3>
-                                    <p>intelligent</p>
+                                    <h3>Bus</h3>
+                                    <p>£100</p>
                                 </div>
                             </div>
                             <div class="col-team">
                                 <div class="col">
-                                    <img src="images/logo.jpg" alt="" width="200" height="95">
+                                    <img src="images/bus2.jpg" alt="" width="200" height="95">
                                     <hr>
-                                    <h3>Josh</h3>
-                                    <p>Intelligent</p>
+                                    <h3>Coach</h3>
+                                    <p>£200</p>
                                 </div>
                             </div>
                             <div class="col-team">
                                 <div class="col">
-                                    <img src="images/logo.jpg" alt="" width="200" height="95">
+                                    <img src="images/bus3.jpg" alt="" width="200" height="95">
                                     <hr>
-                                    <h3>Qasim Ali</h3>
-                                    <p>intelligent</p>
+                                    <h3>Vip Coach</h3>
+                                    <p>£300</p>
                                 </div>
                             </div>
                         </div>
