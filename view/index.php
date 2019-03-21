@@ -42,11 +42,11 @@
    <body>
    <section class="hero">
 <div class="topnav">
-  <a class="active" href="index.php">Home</a>
-  <a href="vehiclelist_view.php">Vehicle List</a>
-  <a href="admintools_view.php">Admin Tools</a>
-  <a href="signup.php">Sign up</a>
-  <div class="login-container">
+  <a class="active" href="../view/index.php">Home</a>
+  <a href="../view/vehiclelist_view.php">Vehicle List</a>
+  <a href="../view/admintools_view.php">Admin Tools</a>
+  <a href="../view/signup.php">Sign up</a>
+  <div class="../view/login-container">
     <form method="post">
       <input type="text" name="user_uid" placeholder="Username" name="username">
       <input type="text" name="user_pwd" placeholder="Password" name="psw">
