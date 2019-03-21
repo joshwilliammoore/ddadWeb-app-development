@@ -100,7 +100,7 @@ require_once "../model/vehicle.php";
     <div class="responsive">
         <div class="gallery">
             <a target="_blank" href="car_image1.jpg">
-            <img src="../view/images/car_image1.jpg" alt="car1" width="600" height="400">
+            <img src="../view/images/car_image1.jpg" alt="vehicle1" style="style=height:200px;object-fit:cover;">
             </a>
             <div class="desc">SEAT The Alhambra<br/>Standard MPV<br/> 
             <input type="submit" name="addToBasket" value="Add to basket"></div>
@@ -110,7 +110,7 @@ require_once "../model/vehicle.php";
     <div class="responsive">
         <div class="gallery">
             <a target="_blank" href="bus_image1.jpg">
-            <img src="../view/images/bus_image1.jpg" alt="car1" width="600" height="400">
+            <img src="../view/images/bus_image1.jpg" alt="vehicle2" style=height:200px;object-fit:cover;">
             </a>
             <div class="desc">Mercedes Sprinter<br/>VIP Coach<br/> 
             <input type="submit" name="addToBasket" value="Add to basket"></div>
@@ -120,7 +120,7 @@ require_once "../model/vehicle.php";
     <div class="responsive">
         <div class="gallery">
             <a target="_blank" href="bus_image2.jpg">
-            <img src="../view/images/bus_image2.jpg" alt="car1" width="600" height="400">
+            <img src="../view/images/bus_image2.jpg" alt="vehicle3" style=height:200px;object-fit:cover;">
             </a>
             <div class="desc">Mercedes Sprinter<br/>VIP Coach<br/> 
             <input type="submit" name="addToBasket" value="Add to basket"></div>
@@ -129,8 +129,8 @@ require_once "../model/vehicle.php";
 
     <div class="responsive">
         <div class="gallery">
-            <a target="_blank" href="bus_image1.jpg">
-            <img src="../view/images/bus_image1.jpg" alt="car1" width="600" height="400">
+            <a target="_blank" href="bus_image3.jpg">
+            <img src="../view/images/bus_image3.jpg" alt="vehicle4" style=height:200px;object-fit:cover;">
             </a>
             <div class="desc">Mercedes Sprinter<br/>VIP Coach<br/> 
             <input type="submit" name="addToBasket" value="Add to basket"></div>
