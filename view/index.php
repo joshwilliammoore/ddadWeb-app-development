@@ -171,6 +171,59 @@
                     </center>
                 </section>
             </span>
+            
+            <span id="contact">
+  <section class="contact">
+     <div class="bar">
+         <div class="bar-col">
+         <i class="fa fa-envelope-open fa-4x"></i> &nbsp;
+         <h3>enquiries@berwynbuses.co.uk</h3>
+         </div>
+         <div class="bar-col">
+         <i class="fa fa-phone fa-4x"></i> &nbsp;
+         <h3>02084571278</h3>
+         </div>
+         <div class="bar-col">
+         <i class="fa fa-fax fa-4x"></i> &nbsp;
+         <h3>02083421953</h3>
+         </div>
+  </div>
+  <main class="contactinfo">
+  <div class="contactinfo-col">
+  <h3>Contact Information</h3>
+  <br>
+  <i class="fa fa-envelope-open"></i> &nbsp; 67 Greenfellow Road SM13DY<br>
+  <i class="fa fa-phone"></i> &nbsp; 0208 863 8932<br><br><br>
+  <b>Contact Us On Social Platforms</b><br><br>
+  <span class="social-icons fb">
+  <a href="https://www.w3schools.com" target="_blank"><i class=" fa fa-facebook" aria-hidden="true"></a></i>
+  </span> &nbsp;
+  <span class="social-icons tw">
+  <a href="https://www.w3schools.com" target="_blank"><i class=" fa fa-twitter" aria-hidden="true"></i>
+  </span> &nbsp;
+  <span class="social-icons ig">
+  <a href="https://www.w3schools.com" target="_blank"><i class=" fa fa-instagram" aria-hidden="true"></i>
+  </span> &nbsp;
+  <span class="social-icons ln">
+  <a href="https://www.w3schools.com" target="_blank"><i class=" fa fa-linkedin" aria-hidden="true"></i>
+  </span> &nbsp;
+  </div> 
+   <div class="contactinfo-col1">
+  
+  </div>
+  <footer class="footer">
+  <div class="footer-col">
+  <h4>Designed Team Mindhackerz </h4>
+  <div>
+  <h4>@Copyrights to Berwyn Buses </h4>
+  </div>
+  <div>
+  <h4>Contact us at the information given above</h4>
+  </div>
+  </div>
+  </footer>
+  </main>
+  </section>
 
 
         </body>
