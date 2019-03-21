@@ -2,7 +2,7 @@
 require_once "../model/vehicle.php";
 require_once "../view/vehiclelist_view.php";
 require_once "../model/dataAccess.php";
-if (!isset($_REQUEST["searchname"]) && !isset($_REQUEST["price"]) && !isset($_REQUEST["vehicleID"]) && !isset($_REQUEST["vehicleModel"]) && !isset($_REQUEST["numberOfPassengers"]) && !isset($_REQUEST["dateAvailable"]) && !isset($_REQUEST["license"]))
+if (!isset($_REQUEST["searchname"]) && !isset($_REQUEST["price"]) && !isset($_REQUEST["vehicleID"]) && !isset($_REQUEST["vehicleModel"]) && !isset($_REQUEST["numberOfPassengers"]) && !isset($_REQUEST["dateAvailable"]) && !isset($_REQUEST["license"])&& !isset($_REQUEST["addToBasket"]))
 {
     $results = getAllVehicles();
 }
@@ -34,5 +34,11 @@ else if (isset($_REQUEST["dateAvailable"]))
 else if (isset($_REQUEST["license"]))
 {
     $results = getAllVehiclesByLicense();
+}
+else if (isset($_REQUEST["addToBasket"]))
+{
+    $id = $_REQUEST["vehiclesID"];
+    $array = addVehicleToBasket($id);
+    $results = getAllVehicles();
 }
 ?>

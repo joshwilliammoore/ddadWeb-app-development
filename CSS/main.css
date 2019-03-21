@@ -159,3 +159,77 @@ Team Section
   border-bottom: none;
 }
 
+/*
+================
+Contact Section
+================
+*/
+
+.contact{ 
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+  }
+  
+  .bar{
+    background-color: rgba(135, 179, 162, 0.336);
+    width: 100%;
+    padding: 30px 5px 30px 5px;
+    text-align: center;
+  }
+  
+  .bar-col{
+    width: 33.33%;
+    float: left;
+    
+  }
+  
+  .bar-col h3{
+    display: inline;
+    
+    
+    
+    }
+  
+  .bar::after{
+      content: "";
+      clear: both;
+    display: table;
+  } 
+
+/*
+================
+Contact form
+================
+*/
+
+.contactinfo{
+	width: 100%;
+	padding: 30px 5px 30px 5px;
+	text-align: center;
+	}
+	
+.contactinfo::after{
+	content: "";
+	display: table;
+	clear: both;		
+	}
+	
+.contactinfo-col{
+	
+    width: 35%;	
+	float: left;
+	text-align: center;
+	padding: 30px 5px 30px 5px;
+	}
+	
+.contactinfo-col1{
+	
+    width: 65%;
+	padding: 30px 5px 30px 5px;
+	}
+.social-icons{
+	padding: 15px;
+	border: 1px dotted black;
+	 
+	}	
+
