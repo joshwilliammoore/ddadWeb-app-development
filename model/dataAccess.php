@@ -136,6 +136,18 @@ function getAllVehiclesByLicense(){
 	return $results;
 }
 
+function addVehicleToBasket($id){
+	global $pdo;
+	if (empty($_SESSION["basket"]))
+	{
+		$_SESSION["basket"]=array();
+	}
+	
+	array_push($_SESSION["basket"], $id);
+
+	return $_SESSION["basket"];
+}
+
 function getAllVehicles()
 {
 	global $pdo;
@@ -194,11 +206,6 @@ function getVehiclesByStartOfVehicle($partialSearch)
   $statement->execute(["$partialSearch%"]);
   $users = $statement->fetchAll(PDO::FETCH_COLUMN, 0);
   return $users;
-}
-
-function addVehicleToBasket($id){
-	global $pdo;
-	$statement = $pdo->prepare("SELECT ");
 }
 
 function addPromotion($vehicleID, $discountAmount, $endDate){
