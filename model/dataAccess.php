@@ -148,6 +148,16 @@ function addVehicleToBasket($id){
 	return $_SESSION["basket"];
 }
 
+function removeVehicleFromBasket($id){
+	global $pdo;
+
+	$pos = array_search($id, $_SESSION["basket"]);
+
+	unset($_SESSION["basket"][$pos]);
+
+	return $_SESSION["basket"];
+}
+
 function getAllVehicles()
 {
 	global $pdo;
@@ -155,6 +165,31 @@ function getAllVehicles()
 	$statement->execute();
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
 	return $results;
+}
+
+function getTotalPriceBasket($id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT SUM(price) from vehicles WHERE vehicle_id IN ($id)");
+	$statement->execute([$id]);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+
+function getAllVehiclesByID($id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE vehicle_id IN ($id)");
+	$statement->execute([$id]);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+
+function completeBooking($id, $requiredDate, $destination, $numberOfPassengers)
+{
+	global $pdo;
+	$statement = $pdo->prepare("INSERT INTO bookings (vehicles_required, date_required, destination, number_of_passengers, customer_id) VALUES ('$id', '$requiredDate', '$destination', '$numberOfPassengers', '1')");
+	$statement->execute([$id, $requiredDate, $destination, $numberOfPassengers]);
 }
 
 function getNewVehicles()
