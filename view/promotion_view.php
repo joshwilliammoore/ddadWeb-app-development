@@ -97,31 +97,13 @@ require_once "../model/vehicle.php";
         <input type="submit" name="addToBasket" value="Add to basket">
     </form>
 
-    <table>
-        <tbody>
-            <?php foreach ($results as $vehicle): ?>
-            <tr>
-                <td><img src="../view/images/<?=$vehicle->images?>" style=height:200px;object-fit:cover;"><br/>
-                <?=$vehicle->vehicle_id?><br/>
-                <?=$vehicle->vehicle_make?><br/>
-                <?=$vehicle->number_of_passengers?><br/>
-                <?=$vehicle->date_available?><br/>
-                £<?=$vehicle->price?><br/>
-                <?=$vehicle->driving_license_required?></td>
-            </tr>
-            <?php endforeach ?>
-        </tbody>
-    </table>
-
     <div class="responsive">
         <div class="gallery">
-        <?php foreach ($results as $vehicle): ?>
             <a target="_blank" href="car_image1.jpg">
-            <img src="../view/images/<?=$vehicle->images?>" style=height:200px;object-fit:cover;">
+            <img src="../view/images/car_image1.jpg" alt="vehicle1" style="style=height:200px;object-fit:cover;">
             </a>
-            <div class="desc"><?=$vehicle->vehicle_id?><br/><?=$vehicle->vehicle_make?><br/>Number of Passengers: <?=$vehicle->number_of_passengers?><br/><?=$vehicle->date_available?><br/>£<?=$vehicle->price?><br/><?=$vehicle->driving_license_required?><br/>
+            <div class="desc">SEAT The Alhambra<br/>Standard MPV<br/> 
             <input type="submit" name="addToBasket" value="Add to basket"></div>
-        <?php endforeach ?>
         </div>
     </div>
 
