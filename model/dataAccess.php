@@ -226,6 +226,13 @@ function editVehicle($id, $number_of_passengers, $model, $date_available, $price
  	$statement ->execute([$vehicle_id, $number_of_passengers, $model, $date_available, $price, $license]);
 }
 
+function removeVehicle($id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("DELETE FROM vehicles WHERE vehicle_id IN ($id)");
+ 	$statement ->execute([$id]);
+}
+
 function deleteVehicle($id)
 {
 	global $pdo;
@@ -249,11 +256,6 @@ function addPromotion($vehicleID, $discountAmount, $endDate){
 	$statement ->execute([$vehicleID, $discountAmount, $endDate]);
 }
  
-function getPromotionVehicles(){
-	global $pdo;
-	$statement = $pdo->prepare("SELECT vehicles.*, promotional.prom_id FROM vehicles INNER JOIN promotional ON vehicles.vehicle_id=promotional.prom_id;")
-}
-
 function users(){
 
 }

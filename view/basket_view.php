@@ -30,32 +30,36 @@ require_once "../model/dataAccess.php";
             <tr>
                 <th>
                     <form action="vehiclelist_view.php" method="get">
-                        <input type="submit" name="vehicleID" value="ID" class="btn" />
+                        <input type="submit" name="vehicleID" value="ID" class="btn" alt="Order by vehicle ID" />
                     </form>
                 </th>
                 <th>
                     <form action="vehiclelist_view.php" method="get">
-                        <input type="submit" name="vehicleModel" value="Model" class="btn" />
+                        <input type="submit" name="vehicleModel" value="Model" class="btn"
+                            alt="Order by vehicle model" />
                     </form>
                 </th>
                 <th>
                     <form action="vehiclelist_view.php" method="get">
-                        <input type="submit" name="numberOfPassengers" value="number of passengers" class="btn" />
+                        <input type="submit" name="numberOfPassengers" value="number of passengers" class="btn"
+                            alt="Order by number of passenger" />
                     </form>
                 </th>
                 <th>
                     <form action="vehiclelist_view.php" method="get">
-                        <input type="submit" name="dateAvailable" value="date available" class="btn" />
+                        <input type="submit" name="dateAvailable" value="date available" class="btn"
+                            alt="Order by date available" />
                     </form>
                 </th>
                 <th>
                     <form action="vehiclelist_view.php" method="get">
-                        <input type="submit" name="price" value="price" class="btn" />
+                        <input type="submit" name="price" value="price" class="btn" alt="Order by price" />
                     </form>
                 </th>
                 <th>
                     <form action="vehiclelist_view.php" method="get">
-                        <input type="submit" name="license" value="Driving license required" class="btn" />
+                        <input type="submit" name="license" value="Driving license required" class="btn"
+                            alt="Order by price" />
                     </form>
                 </th>
             </tr>
@@ -76,13 +80,13 @@ require_once "../model/dataAccess.php";
     </form>
     <br>
     <form action="basket_view.php" method="post">
-        Date required:<input type="date" name="requiredDate" required>
+        Date required:<input type="date" name="requiredDate" required alt="Required date">
         <br>
-        Destination:<input type="text" name="destination" required>
+        Destination:<input type="text" name="destination" required alt="Destination">
         <br>
-        Number of passengers:<input type="text" name="numberOfPassengers" required>
+        Number of passengers:<input type="text" name="numberOfPassengers" required alt="Ammount of passenger">
         <br>
-        <input type="submit" value="complete booking" name="completeBooking" required>
+        <input type="submit" value="complete booking" name="completeBooking" required alt="Complete booking">
     </form>
 
 </body>

@@ -18,6 +18,7 @@ $ids = implode( ", ", $array1 );
         $destination = $_REQUEST["destination"];
         $numberOfPassengers = $_REQUEST["numberOfPassengers"];
         completeBooking($id, $requiredDate, $destination, $numberOfPassengers);
+        removeVehicle($ids);
         $_SESSION["basket"]=array();
         $ids = "";
     }
