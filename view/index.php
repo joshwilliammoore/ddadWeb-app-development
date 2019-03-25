@@ -156,7 +156,7 @@
             <span id="team">
                 <section class="team">
                     <center>
-                    <li><a href="promotion_view.php">Promotions</li>
+                    <li><a href="promotion_view.php"><h2>Promotions</h2></li>
                         <div class="team-wrapper">
                             <div class="col-team">
                                 <div class="col">
