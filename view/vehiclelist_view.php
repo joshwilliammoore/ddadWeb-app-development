@@ -107,15 +107,11 @@ require_once "../model/vehicle.php";
             <a target="_blank" href="car_image1.jpg">
             <img src="../view/images/<?=$vehicle->images?>" style=height:200px;object-fit:cover;">
             </a>
-            <div class="desc"><?=$vehicle->$vehicle_id?><br/><?=$vehicle->vehicle_make?>
+            <span class="desc"><?=$vehicle->$vehicle_id?><br/><?=$vehicle->vehicle_make?>
             <br/><?=$vehicle->number_of_passengers?><?=$vehicle->date_available?><br/>£<?=$vehicle->price?><br/>
             <?=$vehicle->driving_license_required?><br/> 
-            <input type="submit" name="addToBasket" value="Add to basket"></div>
+            <input type="submit" name="addToBasket" value="Add to basket"></span>
         <?php endforeach ?>
-                <img src="../view/images/car_image1.jpg" alt="vehicle1" style="style=height:200px;object-fit:cover;">
-            </a>
-            <div class="desc">SEAT The Alhambra<br />Standard MPV<br />
-                <input type="submit" name="addToBasket" value="Add to basket"></div>
         </div>
     </div>
 
