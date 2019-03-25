@@ -105,7 +105,6 @@ require_once "../model/vehicle.php";
         <div class="gallery">
         <?php foreach ($results as $vehicle): ?>
             <a target="_blank" href="car_image1.jpg">
-<<<<<<< HEAD
             <img src="../view/images/<?=$vehicle->images?>" style=height:200px;object-fit:cover;">
             </a>
             <div class="desc"><?=$vehicle->$vehicle_id?><br/><?=$vehicle->vehicle_make?>
@@ -113,12 +112,10 @@ require_once "../model/vehicle.php";
             <?=$vehicle->driving_license_required?><br/> 
             <input type="submit" name="addToBasket" value="Add to basket"></div>
         <?php endforeach ?>
-=======
                 <img src="../view/images/car_image1.jpg" alt="vehicle1" style="style=height:200px;object-fit:cover;">
             </a>
             <div class="desc">SEAT The Alhambra<br />Standard MPV<br />
                 <input type="submit" name="addToBasket" value="Add to basket"></div>
->>>>>>> 2ec38e8f106d89f6c2ae22523d544bfa59881fca
         </div>
     </div>
 
