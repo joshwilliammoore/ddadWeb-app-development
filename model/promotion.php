@@ -6,14 +6,14 @@ class promotion
     private $discount;
     private $endDate;
     
-    function __get($name)
+    function __get($id)
     {
-        return $this->$name;
+        return $this->$id;
     }
 
-    function __set($name,$value)
+    function __set($id,$value)
     {
-        $this->$name = $value;
+        $this->$id = $value;
     }
 
 }
