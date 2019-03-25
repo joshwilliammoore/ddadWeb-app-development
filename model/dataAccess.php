@@ -184,11 +184,11 @@ function getAllVehiclesByID($id)
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
 	return $results;
 }
-function getAllpromotional($prom_id, $vehicleID, $discount, $endDate)
+function getAllpromotional()
 {
 	global $pdo;
-	$statement = $pdo->prepare("SELECT * FROM promotional WHERE prom_id IN ($id)");
-	$statement->execute([$id]);
+	$statement = $pdo->prepare("SELECT * FROM promotional");
+	$statement->execute();
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "promotion");
 	return $results;
 }
