@@ -2,7 +2,7 @@
 class promotion
 {
     private $prom_id;
-    private $vehicleID;
+    private $vehicleMake;
     private $discount;
     private $endDate;
     

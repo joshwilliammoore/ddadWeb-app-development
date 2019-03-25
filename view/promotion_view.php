@@ -51,7 +51,7 @@
 </th>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="vehicleID" value="VehicleID" class="btn" />
+<input type="submit" name="vehicleMake" value="Vehicle Make" class="btn" />
 </form>
 </th>
 <th>
@@ -70,7 +70,7 @@
 <?php foreach ($results as $promotion): ?>
 <tr>
 <td><?=$promotion->prom_id?></td>
-<td><?=$promotion->vehicleID?></td>
+<td><?=$promotion->vehicleMake?></td>
 <td><?=$promotion->discount?></td>
 <td><?=$promotion->endDate?></td>
 </tr>
