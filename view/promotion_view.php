@@ -80,7 +80,7 @@
 </form>
 
 <form action="promotion_view.php">
-        The IDs of vehicles: <input type="text" name="vehiclesID">
+        The IDs of Promotions: <input type="text" name="prom_id">
 <br>
 <input type="submit" name="addToBasket" value="Add to basket">
 </form>
