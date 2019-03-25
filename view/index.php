@@ -32,7 +32,7 @@
     $message = $error->getMessage();
    }
 ?>
-<!doctype html5>
+<!doctype html5><!--
 <html>
    <head>
       <link href="../CSS/main.css" rel="stylesheet" type="text/css">
@@ -55,7 +55,7 @@
   </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+-->
 <head>
     <link href="../CSS/main.css" rel="stylesheet" type="text/css">
     <script>
