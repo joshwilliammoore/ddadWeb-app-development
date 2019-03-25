@@ -192,7 +192,14 @@ function getAllpromotional()
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "promotion");
 	return $results;
 }
-
+function getPromotionsbyProm_id($prom_id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM promotional WHERE prom_id IN ($prom_id)");
+	$statement->execute($prom_id);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "promotion");
+	return $results;
+}
 function completeBooking($id, $requiredDate, $destination, $numberOfPassengers)
 {
 	global $pdo;
