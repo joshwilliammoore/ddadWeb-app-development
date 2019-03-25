@@ -134,8 +134,8 @@
                 <li><a href="vehiclelist_view.php">BUS</li>
                 <li><a id="temp" href="vehiclelist_view.php">MINI COACH</li>
             </ul>
-            <!--<div class="Promotions">
-                <h2> Promotions </h2>
+            <div class="Promotions">
+            <li><a href="promotion_view.php">Promotions</li>
                 <img class="frontEndSlideShow" src="images/promotion1.jpg">
                 <img class="frontEndSlideShow" src="images/promotion2.jpg">
                 <img class="frontEndSlideShow" src="images/promotion3.jpg">
