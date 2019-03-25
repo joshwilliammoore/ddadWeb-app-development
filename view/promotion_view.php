@@ -46,32 +46,22 @@
 <tr>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="vehicleID" value="ID" class="btn" />
+<input type="submit" name="prom_ID" value="ID" class="btn" />
 </form>
 </th>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="vehicleModel" value="Model" class="btn" />
+<input type="submit" name="vehicleMake" value="Vehicle Make" class="btn" />
 </form>
 </th>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="numberOfPassengers" value="number of passengers" class="btn" />
+<input type="submit" name="Discount" value="Discount" class="btn" />
 </form>
 </th>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="dateAvailable" value="date available" class="btn" />
-</form>
-</th>
-<th>
-<form action="promotion_view.php" method="get">
-<input type="submit" name="price" value="price" class="btn" />
-</form>
-</th>
-<th>
-<form action="promotion_view.php" method="get">
-<input type="submit" name="license" value="Driving license required" class="btn" />
+<input type="submit" name="endDate" value="End Date  " class="btn" />
 </form>
 </th>
 </tr>
@@ -80,7 +70,7 @@
 <?php foreach ($results as $promotion): ?>
 <tr>
 <td><?=$promotion->prom_id?></td>
-<td><?=$promotion->vehicleID?></td>
+<td><?=$promotion->vehicleMake?></td>
 <td><?=$promotion->discount?></td>
 <td><?=$promotion->endDate?></td>
 </tr>
@@ -90,7 +80,7 @@
 </form>
 
 <form action="promotion_view.php">
-        The IDs of vehicles: <input type="text" name="vehiclesID">
+        The IDs of Promotions: <input type="text" name="prom_id">
 <br>
 <input type="submit" name="addToBasket" value="Add to basket">
 </form>

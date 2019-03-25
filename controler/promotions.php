@@ -2,16 +2,16 @@
 require_once "../model/promotion.php";
 require_once "../view/promotion_view.php";
 require_once "../model/dataAccess.php";
-if (!isset($_REQUEST["prom_id"]) && !isset($_REQUEST["vehicleID"]) && !isset($_REQUEST["discount"]) && !isset($_REQUEST["endDate"]) && !isset($_REQUEST["addToBasket"]))
+if (!isset($_REQUEST["prom_id"]) && !isset($_REQUEST["vehicleMake"]) && !isset($_REQUEST["discount"]) && !isset($_REQUEST["endDate"]) && !isset($_REQUEST["addToBasket"]))
 {
     $results = getAllpromotional();
 }
 else if (isset($_REQUEST["prom_id"]))
 {
     $search = $_REQUEST["prom_id"];
-    $results = getPromotionsbyProm_id($prom_id);
+    $results = getPromotionsbyProm_id();
 }
-else if (isset($_REQUEST["vehicleID"]))
+else if (isset($_REQUEST["vehicleMake"]))
 {
     $results = getAllPromotionsByVehicleID();
 }

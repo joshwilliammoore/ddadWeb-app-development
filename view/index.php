@@ -134,12 +134,6 @@
                 <li><a href="vehiclelist_view.php">BUS</li>
                 <li><a id="temp" href="vehiclelist_view.php">MINI COACH</li>
             </ul>
-            <!--<div class="Promotions">
-                <h2> Promotions </h2>
-                <img class="frontEndSlideShow" src="images/promotion1.jpg">
-                <img class="frontEndSlideShow" src="images/promotion2.jpg">
-                <img class="frontEndSlideShow" src="images/promotion3.jpg">
-            </div>-->
             <script>
             var index = 0;
             slide();
@@ -162,7 +156,7 @@
             <span id="team">
                 <section class="team">
                     <center>
-                        <h1>Promotions</h1>
+                    <li><a href="promotion_view.php"><h2>Promotions</h2></li>
                         <div class="team-wrapper">
                             <div class="col-team">
                                 <div class="col">
