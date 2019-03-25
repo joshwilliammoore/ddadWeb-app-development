@@ -1,23 +1,20 @@
 <?php
-class vehicle
+class promotion
 {
-	private $vehicle_id;
-	private $vehicle_type;
-	private $vehicle_model;
-	private $number_of_passengers;
-	private $price;
-	private $driving_license_required;
-	private $vehicle_date;
+    private $prom_id;
+    private $vehicleID;
+    private $discount;
+    private $endDate;
+    
+    function __get($name)
+    {
+        return $this->$name;
+    }
 
-	function __get($name)
-	{
-		return $this->$name;
-	}
-
-	function __set($name,$value)
-	{
-		$this->$name = $value;
-	}
+    function __set($name,$value)
+    {
+        $this->$name = $value;
+    }
 
 }
 ?>
