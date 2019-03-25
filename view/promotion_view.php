@@ -46,32 +46,22 @@
 <tr>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="vehicleID" value="ID" class="btn" />
+<input type="submit" name="prom_ID" value="ID" class="btn" />
 </form>
 </th>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="vehicleModel" value="Model" class="btn" />
+<input type="submit" name="vehicleID" value="VehicleID" class="btn" />
 </form>
 </th>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="numberOfPassengers" value="number of passengers" class="btn" />
+<input type="submit" name="Discount" value="Discount" class="btn" />
 </form>
 </th>
 <th>
 <form action="promotion_view.php" method="get">
-<input type="submit" name="dateAvailable" value="date available" class="btn" />
-</form>
-</th>
-<th>
-<form action="promotion_view.php" method="get">
-<input type="submit" name="price" value="price" class="btn" />
-</form>
-</th>
-<th>
-<form action="promotion_view.php" method="get">
-<input type="submit" name="license" value="Driving license required" class="btn" />
+<input type="submit" name="endDate" value="End Date  " class="btn" />
 </form>
 </th>
 </tr>
