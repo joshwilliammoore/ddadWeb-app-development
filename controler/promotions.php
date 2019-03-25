@@ -4,7 +4,7 @@ require_once "../view/promotion_view.php";
 require_once "../model/dataAccess.php";
 if (!isset($_REQUEST["prom_id"]) && !isset($_REQUEST["vehicleID"]) && !isset($_REQUEST["discount"]) && !isset($_REQUEST["endDate"]) && !isset($_REQUEST["addToBasket"]))
 {
-    $results = getAllPromotions();
+    $results = getAllpromotional();
 }
 else if (isset($_REQUEST["prom_id"]))
 {
