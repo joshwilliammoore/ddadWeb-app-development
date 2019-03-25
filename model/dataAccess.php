@@ -148,6 +148,16 @@ function addVehicleToBasket($id){
 	return $_SESSION["basket"];
 }
 
+function removeVehicleFromBasket($id){
+	global $pdo;
+
+	$pos = array_search($id, $_SESSION["basket"]);
+
+	unset($_SESSION["basket"][$pos]);
+
+	return $_SESSION["basket"];
+}
+
 function getAllVehicles()
 {
 	global $pdo;
@@ -155,6 +165,39 @@ function getAllVehicles()
 	$statement->execute();
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
 	return $results;
+}
+
+function getTotalPriceBasket($id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT SUM(price) from vehicles WHERE vehicle_id IN ($id)");
+	$statement->execute([$id]);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+
+function getAllVehiclesByID($id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM vehicles WHERE vehicle_id IN ($id)");
+	$statement->execute([$id]);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "vehicle");
+	return $results;
+}
+function getAllpromotional($id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("SELECT * FROM promotional WHERE prom_id IN ($prom_id)");
+	$statement->execute([$prom_id]);
+	$results = $statement->fetchAll(PDO::FETCH_CLASS, "promotion");
+	return $results;
+}
+
+function completeBooking($id, $requiredDate, $destination, $numberOfPassengers)
+{
+	global $pdo;
+	$statement = $pdo->prepare("INSERT INTO bookings (vehicles_required, date_required, destination, number_of_passengers, customer_id) VALUES ('$id', '$requiredDate', '$destination', '$numberOfPassengers', '1')");
+	$statement->execute([$id, $requiredDate, $destination, $numberOfPassengers]);
 }
 
 function getNewVehicles()
@@ -189,6 +232,13 @@ function editVehicle($id, $number_of_passengers, $model, $date_available, $price
 	global $pdo;
  	$statement = $pdo->prepare("UPDATE vehicles SET number_of_passengers=$number_of_passengers, vehicle_make='$model', date_available='$date_available', price=$price, driving_license_required='$license' WHERE vehicle_id = $id");
  	$statement ->execute([$vehicle_id, $number_of_passengers, $model, $date_available, $price, $license]);
+}
+
+function removeVehicle($id)
+{
+	global $pdo;
+	$statement = $pdo->prepare("DELETE FROM vehicles WHERE vehicle_id IN ($id)");
+ 	$statement ->execute([$id]);
 }
 
 function deleteVehicle($id)
