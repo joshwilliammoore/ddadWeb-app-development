@@ -1,44 +1,32 @@
 <?php
-require_once "../model/vehicle.php";
-require_once "../view/vehiclelist_view.php";
+require_once "../model/promotion.php";
+require_once "../view/promotion_view.php";
 require_once "../model/dataAccess.php";
-if (!isset($_REQUEST["searchname"]) && !isset($_REQUEST["price"]) && !isset($_REQUEST["vehicleID"]) && !isset($_REQUEST["vehicleModel"]) && !isset($_REQUEST["numberOfPassengers"]) && !isset($_REQUEST["dateAvailable"]) && !isset($_REQUEST["license"])&& !isset($_REQUEST["addToBasket"]))
+if (!isset($_REQUEST["prom_id"]) && !isset($_REQUEST["vehicleID"]) && !isset($_REQUEST["discount"]) && !isset($_REQUEST["endDate"]) && !isset($_REQUEST["addToBasket"]))
 {
-    $results = getAllVehicles();
+    $results = getAllPromotions();
 }
-else if (isset($_REQUEST["searchname"]))
+else if (isset($_REQUEST["prom_id"]))
 {
-    $search = $_REQUEST["searchname"];
-    $results = getVehiclesBySearch($search);
+    $search = $_REQUEST["prom_id"];
+    $results = getPromotionsbyProm_id($prom_id);
 }
 else if (isset($_REQUEST["vehicleID"]))
 {
-    $results = getAllVehiclesByVehicleID();
+    $results = getAllPromotionsByVehicleID();
 }
-else if (isset($_REQUEST["price"]))
+else if (isset($_REQUEST["discount"]))
 {
-    $results = getAllVehiclesByPrice();
+    $results = getAllPromotionsByDiscount();
 }
-else if (isset($_REQUEST["vehicleModel"]))
+else if (isset($_REQUEST["endDate"]))
 {
-    $results = getAllVehiclesByVehicleModel();
-}
-else if (isset($_REQUEST["numberOfPassengers"]))
-{
-    $results = getAllVehiclesByNumberOfPassengers();
-}
-else if (isset($_REQUEST["dateAvailable"]))
-{
-    $results = getAllVehiclesByDateAvailable();
-}
-else if (isset($_REQUEST["license"]))
-{
-    $results = getAllVehiclesByLicense();
+    $results = getAllPromotionsByEndDate();
 }
 else if (isset($_REQUEST["addToBasket"]))
 {
-    $id = $_REQUEST["vehiclesID"];
-    $array = addVehicleToBasket($id);
-    $results = getAllVehicles();
+    $id = $_REQUEST["prom_id"];
+    $array = addPromotionToBasket($id);
+    $results = getAllPromotions();
 }
 ?>
