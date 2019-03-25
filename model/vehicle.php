@@ -8,6 +8,7 @@ class vehicle
 	private $price;
 	private $driving_license_required;
 	private $vehicle_date;
+	private $images;
 
 	function __get($name)
 	{
