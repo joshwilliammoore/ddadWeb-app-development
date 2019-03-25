@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     </head>
 
-    <header>
+<!--    <header>
 <div class="topnav">
   <a class="active" href="index.php">Home</a>
   <a href="vehiclelist_view.php">Vehicle List</a>
@@ -19,22 +19,17 @@
     </form>
   </div>
 </div>
-    </header>
-    <div class = "title">
-         <h1>Login</h1>
-   </div>
+    </header>-->
+    
     <body>
-      <div class = "title">
-         <form action="logincontroller.php" method="POST">
-            <input name="username" placeholder="Username" > 
-            <br /><br style="line-height:1vh"/>
-            <input type="password" name="pssword" placeholder="Password">
-            <br /><br style="line-height:1vh"/>
-            <input type="submit" value="Login"/>
-            <?php if($error): ?>
-                <br/>Please enter a correct username and password.
-            <?php endif ?>
-         </form>
-      </div>
+     
+      <?php
+         if(!isset($_SESSION["adminLoggedIn"])){
+          require_once("../controler/adminConfirmation.php");
+         }else if(!isset($_SESSION["loggedIn"]))
+         {
+           require_once("../controler/userConfirmation");
+         }
+      ?>
    </body>
 </html>

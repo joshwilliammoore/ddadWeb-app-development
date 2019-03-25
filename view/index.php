@@ -1,5 +1,5 @@
 <?php
-   session_start();
+   if(!isset($_SESSION)) session_start();
    
    $host= "kunet";
    $username= "k1745856";
@@ -34,6 +34,26 @@
 ?>
 <!doctype html5>
 <html>
+   <head>
+      <link href="../CSS/main.css" rel="stylesheet" type="text/css">
+      <script> type="text/javascript" src="javascript.js"></script>
+      <title>Home</title>
+   </head>
+   <body>
+   <section class="hero">
+<div class="topnav">
+  <a class="active" href="../view/index.php">Home</a>
+  <a href="../view/vehiclelist_view.php">Vehicle List</a>
+  <a href="../view/admintools_view.php">Admin Tools</a>
+  <a href="../view/signup.php">Sign up</a>
+  <div class="../view/login-container">
+    <form method="post">
+      <input type="text" name="user_uid" placeholder="Username" name="username">
+      <input type="text" name="user_pwd" placeholder="Password" name="psw">
+      <button type="submit"name="login"  value="Login">Login</button>
+    </form>
+  </div>
+</div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
