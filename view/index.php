@@ -211,20 +211,6 @@
   <i class="fa fa-envelope-open"></i> &nbsp; 67 Greenfellow Road SM13DY<br>
   <i class="fa fa-phone"></i> &nbsp; 0208 863 8932<br><br><br>
   <b>Contact Us On Social Platforms</b><br><br>
-  <span class="social-icons fb">
-  <a href="https://www.w3schools.com" target="_blank"><i class=" fa fa-facebook" aria-hidden="true"></a></i>
-  </span> &nbsp;
-  <span class="social-icons tw">
-  <a href="https://www.w3schools.com" target="_blank"><i class=" fa fa-twitter" aria-hidden="true"></i>
-  </span> &nbsp;
-  <span class="social-icons ig">
-  <a href="https://www.w3schools.com" target="_blank"><i class=" fa fa-instagram" aria-hidden="true"></i>
-  </span> &nbsp;
-  <span class="social-icons ln">
-  <a href="https://www.w3schools.com" target="_blank"><i class=" fa fa-linkedin" aria-hidden="true"></i>
-  </span> &nbsp;
-  </div> 
-   <div class="contactinfo-col1">
   
   </div>
   <footer class="footer">
