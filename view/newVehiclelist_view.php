@@ -10,16 +10,7 @@ require_once "../model/vehicle.php";
       <link href="../CSS/table.css" rel="stylesheet" type="text/css">
       <link href="../CSS/main.css" rel="stylesheet" type="text/css">
    </head>
-   <ul class="nav">
-        <li><a href="index.php">HOME</a></li>
-        <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
-        <li><a href="login.php">LOGIN</a></li>
-        <li><a href="signup.php">SIGNUP</a></li>
-        <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
-        <li><a href="Information_view.php">INFORMATION</a></li>
-        <li><a id="basket" href="basket.php">0</a></li>
-</ul>
-   </ul>
+  
    <div class = "title">
          <h1>Latest Vehicles</h1>
    </div>
