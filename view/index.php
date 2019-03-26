@@ -210,7 +210,6 @@
   <br>
   <i class="fa fa-envelope-open"></i> &nbsp; 67 Greenfellow Road SM13DY<br>
   <i class="fa fa-phone"></i> &nbsp; 0208 863 8932<br><br><br>
-  <b>Contact Us On Social Platforms</b><br><br>
   
   </div>
   <footer class="footer">
