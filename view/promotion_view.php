@@ -90,6 +90,7 @@
 </fieldset>
 <input type="submit" value="Add new promotions">
 </form>
+<br>
 
 <div class="responsive">
 <div class="gallery">
