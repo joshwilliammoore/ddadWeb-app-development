@@ -80,9 +80,15 @@
 </form>
 
 <form action="promotion_view.php">
-        The IDs of Promotions: <input type="text" name="prom_id">
+        Add Promotions: <input type="text" name="prom_id">
 <br>
-<input type="submit" name="addToBasket" value="Add to basket">
+<fieldset>
+        <legend> Add Promotions </legend>
+        <label> Vehicle Make; <input type="text" name="vehicle_make" /></label>
+        <label>Discount; <input type="text" name="Discount" /></label>
+        <label>End Date; <input type="text" name="endDate" /></label>
+</fieldset>
+<input type="submit" value="Add new promotions">
 </form>
 
 <div class="responsive">
