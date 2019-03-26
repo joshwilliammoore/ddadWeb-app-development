@@ -9,7 +9,7 @@ if (!isset($_REQUEST["prom_id"]) && !isset($_REQUEST["vehicleMake"]) && !isset($
 else if (isset($_REQUEST["prom_id"]))
 {
     $search = $_REQUEST["prom_id"];
-    $results = getPromotionsbyProm_id();
+    $results = getPromotionsbyProm_id($search);
 }
 else if (isset($_REQUEST["vehicleMake"]))
 {
