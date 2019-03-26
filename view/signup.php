@@ -43,16 +43,17 @@
     </head>
 
     <header>
-        <ul class="nav">
-            <li><a href="index.php">HOME</a></li>
-            <li><a href="vehiclelist_view.php">VEHICLE LIST</a></li>
-            <li><a href="login.php">LOGIN</a></li>
-            <li><a href="signup.php">SIGNUP</a></li>
-            <li><a href="admintools_view.php">ADMIN TOOLS</a></li>
-        </ul>
+    <div class="topnav">
+    <a class="active" href="index.php" alt="Index link">Home</a>
+    <a href="vehiclelist_view.php" alt="Vehicle list link">Vehicle List</a>
+    <a href="admintools_view.php" alt="Admin tools link">Admin Tools</a>
+    <a href="signup.php" alt="Sign up link">Sign up</a>
+    <a href="basket_view.php" alt="Basket link">Basket</a>
+    <div class="login-container">
+    </div>
     </header>
     <div class = "title">
-         <h1>Signup</h1>
+         <h1>Sign Up</h1>
    </div>
     <body>
       <div class = "title">
