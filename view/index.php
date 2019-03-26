@@ -71,7 +71,14 @@
             <a class="active" href="index.php">Home</a>
             <a href="vehiclelist_view.php">Vehicle List</a>
             <a href="admintools_view.php">Admin Tools</a>
-            <a href="signup.php">Sign up</a>
+            
+            <?php
+            if(isset($_SESSION["user_uid"])){
+                echo'<a href="logout.php">Logout</a>';
+             }else{
+                echo'<a href="signup.php">Sign up</a>';
+             }
+            ?>
             <div class="login-container">
                 <form method="post">
                     <input type="text" name="user_uid" placeholder="Username" name="username">
