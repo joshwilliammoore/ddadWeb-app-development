@@ -192,13 +192,11 @@ function getAllpromotional()
 	$results = $statement->fetchAll(PDO::FETCH_CLASS, "promotion");
 	return $results;
 }
-function getPromotionsbyProm_id($id)
+function addPromotion($prom_id, $vehicleMake, $discount, $endDate)
 {
 	global $pdo;
-	$statement = $pdo->prepare("SELECT * FROM promotional WHERE prom_id IN ($id)");
-	$statement->execute($id);
-	$results = $statement->fetchAll(PDO::FETCH_CLASS, "promotion");
-	return $results;
+	$statement = $pdo->prepare("INSERT INTO promotional (prom_id, vehicleMake, discount, endDate) VALUES ($prom_id, $vehicleMake, $discount, $endDate)");
+	$statement ->execute([$prom_id, $vehicleMake, $discount, $endDate]);
 }
 function completeBooking($id, $requiredDate, $destination, $numberOfPassengers)
 {
