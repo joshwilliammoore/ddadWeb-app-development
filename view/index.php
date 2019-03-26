@@ -104,8 +104,8 @@
         <body>
             <div class="slideShow">
                 <img class="frontEndSlideshow" src="images/bus1.jpg">
-                <img class="frontEndSlideshow" src="images/bus2.jpg">
                 <img class="frontEndSlideshow" src="images/bus4.jpg">
+                <img class="frontEndSlideshow" src="images/bus3.jpg">
             </div>
             <script>
             var index = 0;
