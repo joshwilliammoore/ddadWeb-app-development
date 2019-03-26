@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title></title>
         <link rel="stylesheet" type="text/css" href="../CSS/main.css">
@@ -18,7 +19,7 @@
     <div class = "title">
          <h1>Login</h1>
    </div>
-</html>
+
 
 <?php
 session_start();
@@ -29,3 +30,5 @@ if(isset($_SESSION["user_uid"])){
     header("location:index.php");
 }
 ?>
+<meta http-equiv="refresh" content="0; URL='kunet.kingston.ac.uk/k1628395/web-app-development/view'"/>
+</html>
