@@ -262,12 +262,6 @@ function getVehiclesByStartOfVehicle($partialSearch)
   $users = $statement->fetchAll(PDO::FETCH_COLUMN, 0);
   return $users;
 }
-
-function addPromotion($vehicleID, $discountAmount, $endDate){
-	global $pdo;
-	$statement = $pdo -> prepare ("INSERT INTO promotional (vehicleID, discount, endDate) VALUES ('$vehicleID', '$discountAmount', '$endDate')");
-	$statement ->execute([$vehicleID, $discountAmount, $endDate]);
-}
  
 function users(){
 
