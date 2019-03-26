@@ -101,51 +101,9 @@ require_once "../model/vehicle.php";
         <input type="submit" name="addToBasket" value="Add to basket" alt="Add to basket">
     </form>
 
-    <div class="responsive">
-        <div class="gallery">
-        <?php foreach ($results as $vehicle): ?>
-            <a target="_blank" href="car_image1.jpg">
-            <img src="../view/images/<?=$vehicle->images?>" style=height:200px;object-fit:cover;">
-            </a>
-            <span class="desc"><?=$vehicle->$vehicle_id?><br/><?=$vehicle->vehicle_make?>
-            <br/><?=$vehicle->number_of_passengers?><?=$vehicle->date_available?><br/>£<?=$vehicle->price?><br/>
-            <?=$vehicle->driving_license_required?><br/> 
-            <input type="submit" name="addToBasket" value="Add to basket"></span>
-        <?php endforeach ?>
-        </div>
-    </div>
+    
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="bus_image1.jpg">
-                <img src="../view/images/bus_image1.jpg" alt="vehicle2" style=height:200px;object-fit:cover;">
-            </a>
-            <div class="desc">Mercedes Sprinter<br />VIP Coach<br />
-                <input type="submit" name="addToBasket" value="Add to basket"></div>
-        </div>
-    </div>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="bus_image2.jpg">
-                <img src="../view/images/bus_image2.jpg" alt="vehicle3" style=height:200px;object-fit:cover;">
-            </a>
-            <div class="desc">Mercedes Sprinter<br />VIP Coach<br />
-                <input type="submit" name="addToBasket" value="Add to basket"></div>
-        </div>
-    </div>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="bus_image3.jpg">
-                <img src="../view/images/bus_image3.jpg" alt="vehicle4" style=height:200px;object-fit:cover;">
-            </a>
-            <div class="desc">Mercedes Sprinter<br />VIP Coach<br />
-                <input type="submit" name="addToBasket" value="Add to basket"></div>
-        </div>
-    </div>
-
-    <div class="clearfix"></div>
+   
 
 
 </body>
